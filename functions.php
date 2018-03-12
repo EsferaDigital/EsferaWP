@@ -45,3 +45,12 @@ function widgets_activation(){
 }
 
 add_action('widgets_init', 'widgets_activation');
+
+// JS Personalizado
+
+function insertar_js(){
+	$scriptSrc = get_template_directory_uri() . '/js/all.min.js';
+	wp_enqueue_script( 'personal', $scriptSrc , array(), '1.0',  true );
+}
+
+add_action( 'wp_enqueue_scripts', 'insertar_js' );

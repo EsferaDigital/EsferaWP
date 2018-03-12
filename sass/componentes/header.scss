@@ -1,0 +1,124 @@
+.main-header {
+	background-color: green;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: rem(50px);
+	line-height: rem(50px);
+	@include mq($medium){
+		justify-content: space-between;
+  }
+}
+
+.logo-container{
+  display: flex;
+  width: 40%;
+  margin-left: $gutter;
+  margin-top: -.5rem;
+  height: rem(50px);
+  line-height: rem(50px);
+}
+
+.logo-container a{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 5.5vw;
+	font-weight: 400;
+	@include mq($medium){
+		font-size: 2.25rem;
+  }
+}
+
+.icon-menu {
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-right: $gutter;
+	color: white;
+	font-size: 1.8rem;
+	z-index: 210;
+	cursor: pointer;
+	&::before{
+		margin: 0;
+	}
+	@include mq($medium){
+		display: none;
+	}
+}
+
+.container-nav{
+	position: fixed;
+	display: flex;
+	background-color: color(bg-footer);
+	top: rem(0px);
+	right: -$off-canvas;
+	width: $off-canvas;
+	height: 100vh;
+	padding: 1rem;
+	padding-top: rem(48px);
+	z-index: 200;
+	transition: all .4s;
+	@include mq($small){
+		//border: 3px solid color(small);
+	}
+	&.mostrar{
+		right: 0;
+	}
+	@include mq($medium){
+		background-color: transparent;
+		right: 0;
+		width: 100%;
+		padding: 0 .5rem 0 0;
+		height: auto;
+		position: static;
+	}
+}
+
+.menu{
+	padding-left: 0;
+	list-style: none;
+	@include mq($medium){
+		width: 100%;
+		display: flex;
+	}
+	&-item{
+		border-bottom: 1px solid color(hbo);
+		@include mq($medium){
+			flex: auto;
+			border-bottom: none;
+			margin-right: .5rem;
+			text-align: center;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	&-link{
+		display: block;
+		line-height: 3;
+		position: relative;
+		text-transform: uppercase;
+		color: white;
+		font-family: $main-font;
+		font-weight: $light;
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 1px;
+			margin: auto;
+			background: #fff;
+			left: 50%;
+			bottom: .5rem;
+			transition: all .3s;
+		}
+		&:hover:before{
+			width: 95%;
+			left: 5px;
+		}
+	}
+}

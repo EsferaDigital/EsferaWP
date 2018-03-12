@@ -1,7 +1,9 @@
 'use strict'
 
-const gulp = require('gulp'),
-		watch = require('gulp-watch'),
+import gulp from 'gulp';
+import babel from 'gulp-babel';
+
+const watch = require('gulp-watch'),
 		plumber = require('gulp-plumber'),
 		gulpsass = require('gulp-sass'),
 		autoprefixer = require('gulp-autoprefixer'),
@@ -40,8 +42,9 @@ gulp.task('lint', function () {
 		.pipe(jshint())
 });
 
-gulp.task('javascript', ['lint'], function () {
+gulp.task('javascript', ['lint'], function() {
 	return gulp.src('./js/custom/**/*.js')
+		.pipe(babel())
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(concat('all.min.js'))
 		.pipe(uglify())
@@ -62,7 +65,7 @@ gulp.task('imagemin', function () {
 		.pipe(notify({ message: 'Imagemin task finalizada' }))
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch('./sass/**/*.scss', ['sass'])
 	gulp.watch('./js/custom/**/*.js', ['javascript'])
