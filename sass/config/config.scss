@@ -1,0 +1,171 @@
+// Aqui se guardaran las variables
+ // colores, typografias, etc.
+
+ //Paleta de colores
+
+ $colors:(
+   hbo: hsl(200, 72%, 50%),
+   bg-header: hsl(219, 37%, 17%),
+   bg-body: hsl(120, 9%, 89%),
+   bg-main: hsl(211, 23%, 26%),
+   bg-services: hsl(183, 85%, 21%),
+   bg-form: hsl(220, 38%, 85%),
+   bg-footer: hsl(219, 37%, 17%), 
+   btn-cta: hsl(18, 90%, 53%),
+   btn-cta-darken: rgba(243, 92, 27, 0.9),
+   btn-alert: hsl(4, 59%, 47%),
+   btn-alert-darken: hsla(4, 59%, 47%, 0.5),
+   btn-contact: hsl(145, 56%, 43%),
+   btn-contact-darken: hsla(145, 56%, 43%, 0.502),
+   btn-hover: hsla(219, 37%, 17%, 0.5),
+   small: hsl(0, 96%, 46%),
+   medium: hsl(120, 97%, 46%),
+   large: hsl(59, 95%, 49%),
+   x-large: hsl(303, 97%, 46%)  
+   );
+
+ //Funciones
+
+ //Para obtener color
+
+ @function color($color) {
+   @return map-get($colors,$color);
+ }
+
+ // Con esta función, para capturar el color bastaria poner, por ejemplo:
+  //
+  // div{
+  //   background: color(gris-claro);
+  // }
+
+  // Funcion para obtener imagenes
+
+  @function img($img) {
+    @return url('../img/#{$img}');
+  }
+
+  // Convertir px a em
+
+  @function em($el,$parent:16px) {
+    @return ($el / $parent) * 1em;
+  }
+
+  // Convertir px a rem
+
+  @function rem($el) {
+    @return ($el / 16px) * 1rem;
+  }
+
+ // Fuentes
+
+ // Importar Tipografía
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+ $main-font: 'Roboto', sans-serif; //Tipo de fuente
+ $light: 300; //Ancho de fuente
+ $normal: 400; //Ancho de fuente
+
+ //Tamaños de fuentes
+
+ $font-size: em(14px);
+ $h3-size: $font-size * 1.15;
+ $h2-size: $font-size * 1.35;
+ $h1-size: $font-size * 1.7;
+
+ // Importar iconos
+
+ // @import url(https://file.myfontastic.com/GnBSrTdwpTsCBFa78WxP3W/icons.css);
+
+ //Off-canvas para el menu
+
+ $off-canvas: 8rem; //modificar segun necesidad o mejora
+
+//Layout
+
+ $max-width: 1280px;
+ // .l-container{ //Layout container, para definir los limites de los contenidos
+ //
+ // }
+
+ //Gutter para las separaciones
+
+ $gutter: 1rem;
+ $top-header: rem(48px);
+
+  // Mixins
+
+  // Mixin básico, si lleva valores, los predeterminados van al final
+
+  @mixin button-ejemplo($line-height,$font-size,$display:inline-block){
+    //codigo ejemplo
+    display: $display;
+    line-height: $line-height;
+    font-size: $font-size;
+    padding: 0 1rem;
+  }
+
+  // ejemplo de uso
+  .button-ej{
+    @include button-ejemplo(3,1rem);
+    &-small{
+      @include button-ejemplo(2.5,0.8rem);
+    }
+  }
+
+  // Mixin con selectores adentro
+
+  @mixin widget($padding,$header-font,$header-color){
+    display: block;
+    padding: $padding;
+    header{
+      font-family: $header-font;
+      color: $header-color;
+    }
+  }
+
+  // ejemplo de uso
+
+  .widget{
+    @include widget(1em,Arial,blue);
+  }
+
+  // Mixin con múltiples argumentos
+
+  @mixin multiple($box-shadow...){
+    box-shadow: $box-shadow;
+  }
+
+  // ejemplo de uso
+
+  .box{
+    @include multiple(1px solid red, 2px solid blue, 5px solid white);
+  }
+
+
+ //Mixin para media query
+
+  //Breakpoints
+
+  $small: 480px;
+  $medium: 768px;
+  $large: 1024px;
+  $x-large: 1400px;
+
+ @mixin mq($size){
+   @media screen and (min-width: $size){
+     @content;
+   }
+ }
+
+//  ejemplo de uso
+
+.box{
+  color: red;
+  @include mq($medium){
+    color: green;
+  }
+  @include mq($large){
+    color: purple;
+  }
+}
