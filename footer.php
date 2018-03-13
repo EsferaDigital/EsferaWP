@@ -43,5 +43,6 @@
 				</p>
     		</aside>
   		</section>
-</footer>
+	</footer>
+	<?php wp_footer(); ?>
 </body>

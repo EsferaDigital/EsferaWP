@@ -1,5 +1,5 @@
 <?php
-printf('<main class="item i-b w-70 main">');
+printf('<main class="blog-container">');
 
 	//Para personalizar el orden de la busqueda
 	//query_posts('order=ASC');

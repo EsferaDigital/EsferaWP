@@ -51,6 +51,7 @@ printf(
 	get_the_author_posts(),
 	get_avatar(get_the_author_ID(), 100)
 );
-get_template_part('content');
+//Hay que modificar la plantilla que muestra este archivo
+get_template_part('/plantillas/banner');
 get_sidebar();
 get_footer();
