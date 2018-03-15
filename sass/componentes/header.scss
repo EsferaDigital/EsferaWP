@@ -85,38 +85,40 @@
 		width: 100%;
 		display: flex;
 	}
-	&-item{
-		border-bottom: 1px solid color(hbo);
-		@include mq($medium){
-			flex: auto;
-			border-bottom: none;
-			margin-right: .5rem;
-			text-align: center;
-			&:last-child{
-				margin-right: 0;
-			}
+}
+
+#menu-item-1821{
+	border-bottom: 1px solid color(hbo);
+	@include mq($medium){
+		flex: auto;
+		border-bottom: none;
+		margin-right: .5rem;
+		text-align: center;
+		&:last-child{
+			margin-right: 0;
 		}
 	}
-	&-link{
+}
+
+#menu-item-1821 a{
+	display: block;
+	line-height: 3;
+	position: relative;
+	text-transform: uppercase;
+	color: white;
+	font-family: $main-font;
+	font-weight: $light;
+	&:before{
+		content: "";
 		display: block;
-		line-height: 3;
-		position: relative;
-		text-transform: uppercase;
-		color: white;
-		font-family: $main-font;
-		font-weight: $light;
-		&:before{
-			content: "";
-			display: block;
-			position: absolute;
-			width: 0;
-			height: 1px;
-			margin: auto;
-			background: #fff;
-			left: 50%;
-			bottom: .5rem;
-			transition: all .3s;
-		}
+		position: absolute;
+		width: 0;
+		margin: auto;
+		height: 1px;
+		background: white;
+		left: 50%;
+		bottom: .5rem;
+		transition: all .3s;
 		&:hover:before{
 			width: 95%;
 			left: 5px;
