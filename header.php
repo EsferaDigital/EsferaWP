@@ -31,5 +31,4 @@ printf('
 		wp_nav_menu($args);
 printf('
 	</header>
-	<section class="container">
 ');	

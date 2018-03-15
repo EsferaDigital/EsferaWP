@@ -1,7 +1,11 @@
 @import "reset/reset.scss";
 @import "config/config.scss";
+@import "config/btn.scss";
 
 //Componentes
 
 @import "componentes/header.scss";
+@import "componentes/banner.scss";
+@import "componentes/destacados.scss";
+@import "componentes/contacto.scss";
 @import "componentes/footer.scss";

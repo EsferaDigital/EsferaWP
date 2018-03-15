@@ -1,0 +1,85 @@
+.container-contacto{
+	padding-top: $top-header;
+	background-color: rgb(58, 61, 78);
+	background-image: url(./images/bin/cafe.jpg);
+	background-position: 50% 90%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.title{
+	color: white;
+	width: 40%;
+	margin: $gutter auto;
+	font-weight: 200;
+	text-align: center; 
+	padding-bottom: .5rem;
+	border-bottom: 1px solid color(hbo);
+}
+
+.subtitle{
+	display: block;
+	width: 90%;
+	margin: auto;
+	padding: 0 $gutter;
+	color: white;
+	margin-bottom: .5rem;
+	font-weight: 200;
+	text-align: center;
+}
+
+input, textarea{
+	width: 100%;
+	outline: 0;
+	border: 0;
+	position: relative;
+	display: block;
+	padding: $gutter;
+	color: white;
+	background: hsla(210, 42%, 29%, 0.61);
+	transition: all .3s;
+	&:focus{
+		border: 1px solid color(hbo);
+	}
+	&:valid + .form-label, &:focus + .form-label{
+		top: -.5rem;
+		left: $gutter;
+		font-size: .9rem;
+	}
+}
+
+.form{
+	max-width: 600px;
+	margin: 0 auto;
+	border-radius: 2px;
+	&-container{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-item{
+		width: 100%;
+		position: relative;
+		padding: $gutter;
+	}
+	.form-text{
+		height: 10em;
+	}
+	//Para que se posicionen justo encima debe tener la suma del padding de los item y los input.
+	&-label{
+		color: white;
+		opacity: .7;
+		position: absolute;
+		top: $gutter *2;
+		left: $gutter *2;
+		transition: all .3s;
+	}
+	&-button{
+		width: 100%;
+		color: white;
+		text-transform: uppercase;
+		background: color(btn-cta);
+		&:hover{
+			box-shadow: 1px 1px 1px 1px color(hbo);
+		}
+	}
+}

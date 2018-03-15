@@ -1,4 +1,3 @@
-	</section>
 	<footer class="container-footer">
 		<section class="item-footer">
 			<aside class="container-aside-footer">

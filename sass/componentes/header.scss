@@ -1,6 +1,7 @@
 .main-header {
-	background-color: green;
 	display: flex;
+	position: fixed;
+	z-index: 999;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
@@ -33,7 +34,7 @@
 }
 
 .icon-menu {
-	display: inline-block;
+	display: block;
 	position: relative;
 	float: right;
 	margin-right: $gutter;
