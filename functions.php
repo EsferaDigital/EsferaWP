@@ -54,3 +54,15 @@ function insertar_js(){
 }
 
 add_action( 'wp_enqueue_scripts', 'insertar_js' );
+
+//Para obtener la url de las imagenes destacadas de nuestras entradas
+function url_imagen_destacada($size){
+
+	//Variable global de wordpress
+	global $post;
+	$imagen_id = get_post_thumbnail_id( $post->ID );
+	$imagen_destacada = wp_get_attachment_image_src( $imagen_id, $size);
+	// 0 = ruta, 1 = anchura, 2 = altura, 3 = boolean
+	//sprintf devuelve el resultado como string
+	return $imagen_destacada[0];
+}
