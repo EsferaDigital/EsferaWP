@@ -54,13 +54,13 @@ gulp.task('javascript', ['lint'], function() {
 });
 
 gulp.task('imagemin', function () {
-	return gulp.src('./images/raw/**/*.*')
+	return gulp.src('./img/raw/**/*.*')
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(imagemin({
 			progressive: true,
 			interlaced: true
 		}))
-		.pipe(gulp.dest('./images/bin'))
+		.pipe(gulp.dest('./img/'))
 		.pipe(livereload())
 		.pipe(notify({ message: 'Imagemin task finalizada' }))
 });
@@ -69,7 +69,7 @@ gulp.task('watch', function () {
 	livereload.listen();
 	gulp.watch('./sass/**/*.scss', ['sass'])
 	gulp.watch('./js/custom/**/*.js', ['javascript'])
-	gulp.watch('./images/raw/**/*.*', ['imagemin'])
+	gulp.watch('./img/raw/**/*.*', ['imagemin'])
 
 });
 
