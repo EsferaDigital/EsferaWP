@@ -1,6 +1,7 @@
 <?php
 printf('<main class="blog-container">');
 
+
 	//Para personalizar el orden de la busqueda
 	//query_posts('order=ASC');
 
