@@ -87,7 +87,7 @@
 	}
 }
 
-#menu-item-1821{
+.container-nav li{
 	border-bottom: 1px solid color(hbo);
 	@include mq($medium){
 		flex: auto;
@@ -100,7 +100,7 @@
 	}
 }
 
-#menu-item-1821 a{
+.container-nav a{
 	display: block;
 	line-height: 3;
 	position: relative;
@@ -115,13 +115,14 @@
 		width: 0;
 		margin: auto;
 		height: 1px;
-		background: white;
+		background: color(hbo);
 		left: 50%;
 		bottom: .5rem;
 		transition: all .3s;
-		&:hover:before{
-			width: 95%;
-			left: 5px;
-		}
 	}
+}
+
+.container-nav a:hover:before{
+	width: 90%;
+	left: 5px;
 }
