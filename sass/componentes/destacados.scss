@@ -2,9 +2,10 @@
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	background-image: url(./images/bin/header.jpg);
+	background-image: url(./img/header.jpg);
 	background-position: 50% 5%;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	&::after{
 		content: "";
 		position: absolute;
@@ -15,8 +16,9 @@
 		background: color(bg-header);
 		opacity: .7;
 	}
-	@include mq($small){
-		//border: 3px solid color(small);
+	@include mq($medium){
+		padding: $gutter;
+		background-position: 50% 100px;
 	}
 }
 
@@ -25,9 +27,16 @@
 	color: white;
 	z-index: 400;
 	width: 40%;
-	margin: $gutter auto;
-	padding-bottom: .5rem;
 	text-align: center;
+	margin: $gutter auto;
+	@include mq($medium){
+		width: 100%;
+	}
+}
+
+.title-destacados span{
+	font-size: 1.5rem;
+	padding-bottom: .5rem;
 	border-bottom: 1px solid color(hbo);
 }
 
@@ -36,10 +45,16 @@
 	z-index: 400;
 	display: flex;
 	text-align: center;
+	&:hover{
+		background-color: hsla(200, 72%, 50%, 0.3);
+	}
 	@include mq($medium){
 		width: 30%;
 		flex: 1 1;
-		margin-right: 1px;
+		margin-right: 3px;
+	}
+	@include mq($x-large){
+
 	}
 }
 
@@ -50,6 +65,7 @@
 	//background-color: color(bg-main);
 	@include mq($medium){
 		margin-bottom: 0;
+		padding: 3rem 1rem;
 	}
 }
 

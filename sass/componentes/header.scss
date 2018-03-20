@@ -11,14 +11,18 @@
 	line-height: rem(50px);
 	@include mq($medium){
 		justify-content: space-between;
+		padding-top: rem(5px);
   }
+}
+
+.header-color{
+	background-color: color(bg-header);
 }
 
 .logo-container{
   display: flex;
   width: 40%;
   margin-left: $gutter;
-  margin-top: -.5rem;
   height: rem(50px);
   line-height: rem(50px);
 }
@@ -29,7 +33,7 @@
 	font-size: 5.5vw;
 	font-weight: 400;
 	@include mq($medium){
-		font-size: 2.25rem;
+		font-size: 1.5rem;
   }
 }
 
@@ -71,7 +75,7 @@
 	@include mq($medium){
 		background-color: transparent;
 		right: 0;
-		width: 100%;
+		width: 55%;
 		padding: 0 .5rem 0 0;
 		height: auto;
 		position: static;

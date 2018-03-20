@@ -27,7 +27,7 @@ printf('
 printf('
 </head>
 <body>
-	<header class="main-header">
+	<header id="mainHeader" class="main-header">
 		<h1 class="logo-container">
 			<a href="' .get_bloginfo() . '">Esfera Digital</a>
 		</h1>
