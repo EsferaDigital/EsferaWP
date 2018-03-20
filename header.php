@@ -13,6 +13,17 @@ printf('
 	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '" />
 ');
 	wp_head();
+	//Si se muestra la barra de wordpress
+	if( is_admin_bar_showing()){
+		printf('
+			<style>
+				.main-header{
+					top: 2.7rem;
+				}
+			</style>
+		');
+	}
+
 printf('
 </head>
 <body>
