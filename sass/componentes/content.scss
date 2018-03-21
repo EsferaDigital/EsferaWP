@@ -1,5 +1,57 @@
 .blog-container{
-	background-color: darkolivegreen;
+	background-color: white;
+	max-width: $max-width;
+	margin: auto;
+}
+
+//Caja de busquedas
+
+.buscar{
+	display: block;
+	border: 1px solid red;
+}
+
+.searchform{
+	width: 25%;
+	padding: $gutter;
+	background-color:rgba(0, 255, 255, 0.5);
+	font-size: 0;
+}
+
+.screen-reader-text{display: none;}
+
+#searchsubmit{
+	display: inline;
+	padding: .25rem;
+	width: 2rem;
+	height: 2rem;
+	font-size: 0;
+	background: url('img/lupa.png') no-repeat center;
+	background-origin: content-box;
+	background-size: contain;
+	cursor: pointer;
+	vertical-align: middle;
+	&:hover{
+		background-color: color(hbo);
+	}
+}
+
+#s{
+	display: inline;
+	vertical-align: middle;
+	width: 80%;
+	height: 2rem;
+	margin: 0;
+	padding: .25rem;
+	font-size: 1rem;
+}
+
+//fin caja de busqueda
+
+//Paginación
+
+.paginacion{
+	border: 1px solid red;
 }
 
 .blog-item{

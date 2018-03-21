@@ -2,7 +2,7 @@
 		<section class="item-footer">
 			<aside class="container-aside-footer">
 				<h4 class="title-aside-footer">Esfera Digital</h4>
-				<p>Somos una Agencia Digital joven y dinámica. Creemos en un futuro digital altamente integrado y cooperativo en la que lo humano es central y la máquina una aliada que libera y conecta. Nuestra propuesta es la entrega de un servicio cuidado, que acerque el desarrollo tecnológico a las personas, comunicando lo que hacemos y las posibilidaes que hoy ofrece la tecnología, en un lenguaje sencillo. Entendemos que cada cliente es único y trabajamos por crear una identidad digital que refleje dicha unicidad.
+				<p>Somos una Agencia Digital joven y dinámica. Nuestra propuesta es la entrega de un servicio cuidado, que acerque el desarrollo tecnológico a las personas, comunicando lo que hacemos y las posibilidaes que hoy ofrece la tecnología, en un lenguaje sencillo. Entendemos que cada cliente es único y trabajamos por crear una identidad digital que refleje dicha unicidad.
 				</p>
 			</aside>
 			<aside class="container-aside-footer">

@@ -1,5 +1,6 @@
 <?php
 printf('<main class="blog-container">');
+	printf('<aside class="buscar">' . get_search_form(false) . '</aside>');
 	printf('<section class="blog-item">');
 
 
@@ -46,4 +47,7 @@ printf('<main class="blog-container">');
 		endif;
 		rewind_posts();
 	printf('</section>');
+	printf('<div class="paginacion">');
+		wp_pagenavi();
+	printf('</div>');
 printf('</main>');

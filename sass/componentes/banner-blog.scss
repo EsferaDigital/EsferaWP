@@ -1,0 +1,29 @@
+.banner-copy-blog{
+	display: grid;
+	position: absolute;
+	z-index: 500;
+	transform: translateY(-100%);
+	width: 100%;
+	height: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+.banner-copy-subtitle-blog{
+	margin: auto;
+	width: 70%;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	& span{
+		font-size: inherit;
+		margin: 0;
+		color: color(btn-cta-darken);
+	}
+	@include mq($small){
+		font-size: 1.7rem;
+	}
+	@include mq($medium){
+		font-size: 2rem;
+	}
+}
