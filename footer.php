@@ -34,8 +34,8 @@
 						</li>
 					</ul>
             </section>
-			 </aside>
-			 <aside class="copyright">
+			</aside>
+			<aside class="copyright">
 				<p class="icon-copyright copyright-item">Copyright Esfera Digital 2017-2018
 				</p>
 				<p class="copyright-item">Diseñado por Esfera Digital

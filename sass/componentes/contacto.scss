@@ -1,10 +1,13 @@
 .container-contacto{
 	padding-top: $top-header;
 	background-color: rgb(58, 61, 78);
-	background-image: url(./images/bin/cafe.jpg);
+	background-image: url(./img/cafe.jpg);
 	background-position: 50% 90%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	@include mq($medium){
+		background-image: url(./img/cafe-large.jpg);
+	}
 }
 
 .title{
