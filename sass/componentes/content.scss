@@ -101,6 +101,8 @@
 	border: none !important;
 }
 
+//Fin paginación
+
 //Grid context
 .blog-grid-container{
 	display: flex;
@@ -110,30 +112,39 @@
 	padding: 0 $gutter;
 	@include mq($medium){
 		display: grid;
-		grid-gap: 5px;
+		grid-gap: .7rem;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, auto);
 	}
 	@include mq($large){
+		grid-gap: 1rem;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, auto);
 	}
 }
 
 .blog-grid-item{
+	--color: black;
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
 	height: auto;
 	margin-bottom: $gutter;
+	padding: $gutter;
+	color: var(--color);
 	align-items: flex-start;
-	text-align: center;
+	//text-align: center;
+	&:hover{
+		--color: white;
+		background-color: color(bg-header);
+		color: var(--color);
+	}
 }
 
 .blog-img{
 	max-width: 90%;
 	height: auto;
-	margin: .5rem;
+	margin: .7rem;
 	text-align: center;
 	@include mq($medium){
 		max-width: 100%;
@@ -142,21 +153,29 @@
 }
 
 .blog-title{
+	display: inline-block;
+	width: 90%;
 	font-size: 1.5rem;
-	color: black;
+	text-align: center;
+	margin-top: .5rem;
+	color: var(--color);
 	border-bottom: 1px solid color(hbo);
 }
 
 .extracto{
-	margin: .5rem;
+	margin: .5rem 0;
 	& a{
-		color: black;
+		color: inherit;
+		&:hover{
+			color: inherit;
+		}
 	}
 	& small{
 		//leer más
 		display: block;
 		width: 40%;
-		margin: auto;
+		margin-top: .5rem;
+		text-align: center;
 		font-size: .9rem;
 		padding: .4rem;
 		color: white;
@@ -167,7 +186,7 @@
 			opacity: .7;
 		}
 		@include mq($medium){
-			width: 50%;
+			width: auto;
 			line-height: 1.5;
 		}
 	}

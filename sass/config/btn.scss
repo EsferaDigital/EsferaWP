@@ -3,9 +3,9 @@
   font-size: .9rem;
   letter-spacing: 1.5px;
   line-height: 2;
+  font-weight: 500;
   padding: 0 .5rem;
   cursor: pointer;
-  border: 1px solid black;
   color: white;
   &.cta{
     background-color: color(btn-cta);

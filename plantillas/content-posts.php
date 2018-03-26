@@ -1,56 +1,31 @@
 <?php
-printf('<main class="item i-b w-70 main">');
-
-	//Para personalizar el orden de la busqueda
-	//query_posts('order=ASC');
-
-	//Lógica de the_loop
-	//Si (hay entradas)
-		//mientras (hay entradas)
-			//muestra la info de las entradas
-	//Si no
-		//no hay entradas publicadas o que coincidan con la búsqueda
-
+printf('<main class="post">');
 	if( have_posts() ):
 		while( have_posts() ):
 			the_post();
-
-			//printf('<p>Imprimiendo entrada</p>');
 			$template_html = '
-				<article class="post item">
-					<h1>%s</h1>
-					<div>%s</div>
-					<a href="%s">%s</a>
-					<p>%s - %s</p>
-					<p>%s</p>
-					<p>%s</p>
+				<article class="post-item">
+					<h1 class="post-title">%s</h1>
+					<div class="post-img">%s</div>
+					<p class="post-content">%s</p>
+					<p class="post-autor">%s</p>
+					<p class="post-date">%s - %s</p>
 					<p class="post-categories">%s</p>
-					<p>
-						<a href="%s">%s</a>
-					</p>
-					<div class="the-content">%s</div>
+					<p class="post-tag>%s</p>
 				</article>
-				<hr>
 			';
 
 			printf(
 				$template_html,
 				get_the_title(),
 				//Recibe 3 parametros id del post, tamaño (medium, thumbnail, large) y un array para darle al atributo alt de la imagen, el nombre de la publicación.
-				get_the_post_thumbnail($post_id, 'medium', array('alt' => get_the_title() ) ),
-				get_the_permalink(),
-				get_the_permalink(),
+				get_the_post_thumbnail($post_id, 'full', array('alt' => get_the_title() ) ),
+				get_the_content(),
+				get_the_author(),
 				get_the_date(),
 				get_the_time(),
-				get_the_excerpt(),
-				//get_the_author(),
-				//get_the_author_ID(),
-				//get_author_posts_url(1),
 				get_the_category_list(' - '),
-				get_the_tag_list( '', ', ', ''),
-				get_author_posts_url(get_the_author_ID()),
-				get_the_author(),
-				get_the_content()
+				get_the_tag_list( '', ', ', '')		
 			);
 		endwhile;
 	else:

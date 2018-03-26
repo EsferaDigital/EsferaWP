@@ -38,6 +38,10 @@
 			@include mq($medium){
 				width: 20vw;
 			}
+			@include mq($large){
+				margin-top: 3rem;
+				width: 17vw;
+			}
 		}
 		&-subtitle{
 			margin: auto;
@@ -47,10 +51,14 @@
 			text-align: center;
 			margin-bottom: .5rem;
 			margin-top: 0;
-			//border: 1px solid green;
+			border: 1px solid green;
 			@include mq($medium){
 				width: 60%;
-				font-size: 1.3rem;
+				font-size: 1.7rem;
+			}
+			@include mq($large){
+				width: 50%;
+				margin-top: -.5rem;
 			}
 		}
 	}

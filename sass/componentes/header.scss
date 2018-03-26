@@ -134,4 +134,7 @@
 	transition: all .3s;
 	// width: 90%;
 	// left: 5px;
+	@include mq($medium){
+		background-color: rojo;
+	}
 }
