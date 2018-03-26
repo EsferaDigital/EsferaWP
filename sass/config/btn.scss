@@ -4,8 +4,8 @@
   letter-spacing: 1.5px;
   line-height: 2;
   padding: 0 .5rem;
+  cursor: pointer;
   border: 1px solid black;
-  border-radius: 5px;
   color: white;
   &.cta{
     background-color: color(btn-cta);

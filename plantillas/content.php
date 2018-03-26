@@ -7,12 +7,14 @@ printf('<main class="blog-container">');
 					the_post();
 					$template_html = '
 						<aside class="blog-grid-item">
-							<a href="%s">
-								<img class="blog-img" src="%s">
-								<figcapion class="blog-title">%s</figcaption>
-								<p>%s</p>
-								<p>%s</p>
-							</a>
+							<figure>
+								<a href="%s">
+									<img class="blog-img" src="%s">
+									<figcapion class="blog-title">%s</figcaption>
+									<p class="extracto">%s</p>
+									<p class="fecha">%s</p>
+								</a>
+							</figure>
 						</aside>
 					';
 

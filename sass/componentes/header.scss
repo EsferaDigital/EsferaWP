@@ -21,6 +21,9 @@
   margin-left: $gutter;
   height: rem(50px);
   line-height: rem(50px);
+  &:hover{
+	  opacity: .7;
+  }
 }
 
 .logo-container a{
