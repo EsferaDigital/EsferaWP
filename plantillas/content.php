@@ -19,7 +19,7 @@ printf('<main class="blog-container">');
 					printf(
 						$template_html,
 						get_permalink(),
-						url_imagen_destacada('medium'),
+						url_imagen_destacada('thumbnail'),
 						get_the_title(),
 						get_the_excerpt(),
 						get_the_date()

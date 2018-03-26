@@ -18,6 +18,9 @@
   @include mq($medium){
     width: 33%;
   }
+  & p{
+    padding: 1rem;
+  }
 }
 
 .title-aside-footer{
@@ -52,8 +55,11 @@
     opacity: 1;
   }
   @include mq($medium){
-    width: 100%;
     padding: 1rem;
+    width: 100%;
+  }
+  @include mq($large){
+    width: 50%;
   }
 }
 
@@ -93,7 +99,11 @@
     text-align: center;
     opacity: .7;
     @include mq($medium){
-      width: 17%;
+      width: 30%;
+      text-align: start;
+    }
+    @include mq($large){
+      width: 15%;
     }
   }
   @include mq($medium){
