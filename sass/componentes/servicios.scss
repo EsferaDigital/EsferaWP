@@ -1,0 +1,83 @@
+.services{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: color(primary-light);
+	color: white;
+	border: 1px solid red;
+	&-first-title{
+		width:100%;
+		background-color: fuchsia;
+		text-align: center;
+		padding: $gutter;
+		& h1{
+			padding: 1rem;
+			border: 1px solid black;
+			font-size: 1.5rem;
+			line-height: 1.5;
+			background-color: firebrick;
+		}
+		@include mq($medium){
+			width: 30%;
+		}
+	}
+	&-item{
+		display:flex;
+		flex-wrap: wrap;
+		padding: $gutter;
+		border: 1px solid violet;
+		&-box{
+			width: 100%;
+			padding: .2rem;
+			border: 1px solid red;
+			@include mq($medium){
+				width: 50%;
+			}
+		}
+		@include mq($medium){
+			width: 70%;
+		}
+
+	}
+	&-title{
+		display: block;
+		width: 100%;
+		text-align: center;
+		font-size: 1.5rem;
+		border: 1px solid rgb(53, 10, 133);
+		& span{
+			font-size: inherit;
+			color: color(secondary);
+		}
+	}
+}
+
+.sub-container{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgb(111, 71, 255);
+	border: 1px solid rgb(133, 28, 10);
+	&-item{
+		display: flex;
+	}
+	&-box{
+		display: flex;
+		width: 100%;
+		text-align: center;
+		@include mq($medium){
+			display: block;
+			flex: 1 1 16%;
+		}
+	}
+}
+
+.iconos{
+	border: 1px solid black;
+}
+
+.box-text{
+	padding: .5rem;
+	& h2{
+		font-size: 1.2rem;
+		color: color(secondary);
+	}
+}

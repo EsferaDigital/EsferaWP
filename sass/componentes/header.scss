@@ -115,26 +115,13 @@
 	color: white;
 	font-family: $main-font;
 	font-weight: $light;
-	// &:before{
-	// 	content: "";
-	// 	display: block;
-	// 	position: absolute;
-	// 	width: 0;
-	// 	margin: auto;
-	// 	height: 1px;
-	// 	background: color(hbo);
-	// 	left: 50%;
-	// 	bottom: .5rem;
-	// 	transition: all .3s;
-	// }
 }
 
 .container-nav a:hover{
-	background-color: color(btn-cta-darken);
 	transition: all .3s;
 	// width: 90%;
 	// left: 5px;
 	@include mq($medium){
-		background-color: rojo;
+		background-color: color(btn-cta-darken);
 	}
 }
