@@ -24,6 +24,7 @@
 
 .title-destacados{
 	display: block;
+	width: 100%;
 	position: relative;
 	z-index: 200;
 	margin: auto;
@@ -43,6 +44,7 @@
 }
 
 .inicio{
+	margin-top: 2rem;
 	position: relative;
 	z-index: 400;
 	display: flex;
@@ -69,18 +71,22 @@
 		margin-bottom: 0;
 		padding: 3rem 1rem;
 	}
+	& span{
+		margin-left: rem(16px);
+		font-size: rem(32px);
+	}
+	& h3{
+		padding: rem(6px) 0;
+		font-weight: 300;
+	}
+	& p{
+		line-height: 1.5;
+	}
 }
 
-span{
-	margin-left: rem(16px);
-   font-size: rem(32px);
-}
-
-h3{
-	padding: rem(6px) 0;
-	font-weight: 300;
-}
-
-p{
-	line-height: 1.5;
+.destacados-servicios{
+	display: block;
+	@include mq($small){
+		width: 45%;
+	}
 }

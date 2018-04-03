@@ -25,7 +25,7 @@ printf('<main class="post">');
 				get_the_date(),
 				get_the_time(),
 				get_the_category_list(' - '),
-				get_the_tag_list( '', ', ', '')		
+				get_the_tag_list('', ', ', '')		
 			);
 		endwhile;
 	else:

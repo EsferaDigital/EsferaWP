@@ -20,20 +20,11 @@
 			</aside>
 			<aside class="container-aside-footer">
 				<h4 class="title-aside-footer">Blog</h4>
-				<section class="footer-blog">
-					<ul class="footer-blog-container">
-						<li class="footer-blog-item"><a class="footer-blog-link" href="#">- Entrada 1</a>
-						</li>
-						<li class="footer-blog-item"><a class="footer-blog-link" href="#">- Entrada 2</a>
-						</li>
-						<li class="footer-blog-item"><a class="footer-blog-link" href="#">- Entrada 3</a>
-						</li>
-						<li class="footer-blog-item"><a class="footer-blog-link" href="#">- Entrada 4</a>
-						</li>
-						<li class="footer-blog-item"><a class="footer-blog-link" href="#">- Entrada 5</a>
-						</li>
-					</ul>
-            </section>
+				<?php
+				printf('<section class="footer-blog">');
+				dynamic_sidebar(2);
+				printf('</section>');
+				?>
 			</aside>
 			<aside class="copyright">
 				<p class="icon-copyright copyright-item">Copyright Esfera Digital 2017-2018

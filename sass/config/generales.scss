@@ -1,0 +1,31 @@
+//Ultimas entradas footer blog
+
+.widgets{
+	text-align: center;
+	margin: 0;
+	& h3{
+		display: none;
+	}
+	& ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	& li{
+		display: block;
+		width: 90%;
+		margin: auto;
+		padding: .5rem;
+	}
+	& a{
+		color: white;
+		padding: .5rem;
+		&:hover{
+			background-color: color(btn-cta-darken);
+		}
+	}
+}
+
+.post-date{
+	font-size: .7rem;
+}
