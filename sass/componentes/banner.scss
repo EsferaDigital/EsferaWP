@@ -1,11 +1,90 @@
+// .banner{
+// 	position: relative;
+// 	height: 100%;
+// 	//line-height: 0;
+// 	@include mq($small){
+// 		//border: 3px solid color(small);
+// 	}
+// 	&::after{
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		background: color(bg-header);
+// 		opacity: .7;
+// 	}
+// 	&-img{
+// 		width: 100%;
+// 		height: auto;
+// 		display: block;
+// 		line-height: 0;
+// 	}
+// 	&-copy{
+// 		display: grid;
+// 		position: absolute;
+// 		z-index: 500;
+// 		transform: translateY(-100%);
+// 		width: 100%;
+// 		height: 100%;
+// 		justify-items: center;
+// 		align-items: center;
+// 		&-img{
+// 			width: 25vw;
+// 			margin-top: 2rem;
+// 			height: auto;
+// 			//border: 1px solid red;
+// 			@include mq($medium){
+// 				width: 20vw;
+// 			}
+// 			@include mq($large){
+// 				margin-top: 3rem;
+// 				width: 17vw;
+// 			}
+// 		}
+// 		&-subtitle{
+// 			margin: auto;
+// 			width: 70%;
+// 			font-size: 1rem;
+// 			color: white;
+// 			letter-spacing: 1px;
+// 			text-align: center;
+// 			//margin-bottom: .5rem;
+// 			margin-top: -1rem;
+// 			@include mq($medium){
+// 				width: 60%;
+// 				font-size: 1.7rem;
+// 			}
+// 			@include mq($large){
+// 				width: 50%;
+// 				margin-bottom: 10rem;
+// 			}
+// 		}
+// 	}
+// }
+
+// .banner-copy a{
+// 	margin-top: -1rem;
+// 	@include mq($large){
+// 		margin-top: -10rem;
+// 	}
+// }
+
 .banner{
+	width: 100%;
+	height: 40vh;
+
 	position: relative;
-	height: 100%;
-	//line-height: 0;
-	@include mq($small){
-		//border: 3px solid color(small);
-	}
-	&::after{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	background: img('banner-mobile.jpg') center / cover;
+	&::before{
 		content: "";
 		position: absolute;
 		top: 0;
@@ -15,59 +94,37 @@
 		background: color(bg-header);
 		opacity: .7;
 	}
-	&-img{
-		width: 100%;
-		height: auto;
-		display: block;
-		line-height: 0;
+	&-logo,
+	&-subtitle,
+	& a{
+		font-size: 1rem;
+		font-weight: 400;
+		position: relative;
+		color: white;
 	}
-	&-copy{
-		display: grid;
-		position: absolute;
-		z-index: 500;
-		transform: translateY(-100%);
-		width: 100%;
-		height: 100%;
-		justify-items: center;
-		align-items: center;
-		&-img{
-			width: 25vw;
-			margin-top: 2rem;
-			height: auto;
-			//border: 1px solid red;
-			@include mq($medium){
-				width: 20vw;
-			}
-			@include mq($large){
-				margin-top: 3rem;
-				width: 17vw;
-			}
+	&-logo{
+		width: 25%;
+		@include mq($medium){
+			width: 20%;
 		}
-		&-subtitle{
-			margin: auto;
-			width: 70%;
-			font-size: 1rem;
-			color: white;
-			letter-spacing: 1px;
-			text-align: center;
-			//margin-bottom: .5rem;
-			margin-top: -1rem;
-			@include mq($medium){
-				width: 60%;
-				font-size: 1.7rem;
-			}
-			@include mq($large){
-				width: 50%;
-				margin-bottom: 10rem;
-			}
+	}
+	&-subtitle{
+		padding: 0 $gutter $gutter;
+		@include mq($medium){
+			width: 60%;
+			font-size: 1.2rem;
 		}
+	}
+	& a{
+		font-size: .9rem;
+		@include mq($medium){
+			margin-top: 1.5rem;
+		}
+	}
+	@include mq($medium){
+		background: img('banner.jpg') center / cover;
 	}
 }
 
-.banner-copy a{
-	margin-top: -1rem;
-	@include mq($large){
-		margin-top: -10rem;
-	}
-}
+
 

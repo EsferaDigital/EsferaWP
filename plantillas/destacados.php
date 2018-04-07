@@ -24,7 +24,7 @@
 </section>
 <section class="contenedor-destacados">
   <h3 class="title-destacados"><span>Servicios</span></h3>
-    <article class="inicio destacados-servicios">
+  <article class="inicio destacados-servicios">
     <aside class="aside-inicio">
       <span class="icon-ruler"></span>
       <h3>Diseño Web</h3>
