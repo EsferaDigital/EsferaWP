@@ -1,3 +1,6 @@
-.text-services{
-	font-size: 1.2rem;
+.banner-servicios{
+	@include banner(img('banner-mobile-services.jpg'));
+	@include mq($medium){
+		@include banner(img('banner-services.jpg'));
+	}
 }

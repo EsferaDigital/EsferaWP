@@ -3,13 +3,15 @@
 @import "config/btn.scss";
 @import "config/layout.scss";
 @import "config/generales.scss";
+@import "config/mixin.scss";
 
 //Componentes
 
 @import "componentes/header.scss";
 @import "componentes/banner.scss";
-@import "componentes/banner-blog.scss";
 @import "componentes/banner-servicios.scss";
+@import "componentes/banner-ofertas.scss";
+@import "componentes/banner-blog.scss";
 @import "componentes/servicios.scss";
 @import "componentes/destacados.scss";
 //@import "componentes/index.scss";
