@@ -17,28 +17,45 @@
 
 .logo-container{
   display: flex;
-  width: 40%;
+  width: 80%;
   margin-left: $gutter;
   height: rem(50px);
   line-height: rem(50px);
   &:hover{
 	  opacity: .7;
   }
+  &-text{
+	  color: color(btn-cta-darken);
+	  font-family: 'Roboto', sans-serif;
+	  //font-size: 5.5vw;
+	  font-size: 1.7rem;
+	  font-weight: 400;
+	  transform: translate(52%, 150%);
+	  transition: all .3s ease;
+	  @include mq($medium){
+		  transform: translate(0, 0);
+		  font-size: 1.5rem;
+		}
+	}
 }
 
-.logo-container a{
-	color: color(btn-cta-darken);
-	font-family: 'Roboto', sans-serif;
-	font-size: 5.5vw;
-	font-weight: 400;
-	@include mq($medium){
-		font-size: 1.5rem;
-  }
-}
+// estilos para funcion scroll
 
 .header-color{
 	background-color: color(bg-header);
 }
+
+.logo-onScroll{
+	width: 40%;
+}
+
+.logo-text-onScroll{
+	font-size: 5.5vw;
+	transform: translate(0, 0);
+	transition: all .3s ease;
+}
+
+//Fin estilos para funcion scroll
 
 .icon-menu {
 	display: block;

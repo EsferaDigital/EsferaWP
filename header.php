@@ -5,7 +5,7 @@ printf('
 <head>
 	<title>' . get_bloginfo('name') . '</title>
 	<meta charset="' . get_bloginfo('charset') . '" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<meta name="description" content="' . get_bloginfo('description') . '" />
 	<link rel="icon" type="image/x-icon" href="' . get_bloginfo('template_url') . '/img/favicon.png"/>
@@ -18,7 +18,7 @@ printf('
 		printf('
 			<style>
 				.main-header{
-					top: 2.7rem;
+					top: 2.5rem;
 				}
 			</style>
 		');
@@ -28,8 +28,8 @@ printf('
 </head>
 <body>
 	<header id="mainHeader" class="main-header">
-		<h1 class="logo-container">
-			<a href="' .get_bloginfo() . '">Esfera Digital</a>
+		<h1 id="logoContainer" class="logo-container">
+			<a id="logoText" class="logo-container-text" href="https://esferadigital.cl">Esfera Digital</a>
 		</h1>
 		<i class="icon-menu" id="toggle-menu"></i>
 ');

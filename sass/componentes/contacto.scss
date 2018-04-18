@@ -1,4 +1,4 @@
-.container-contacto{
+.contacto{
 	padding-top: $top-header;
 	background-color: rgb(58, 61, 78);
 	background-image: url(./img/cafe.jpg);
@@ -62,7 +62,7 @@ input, textarea{
 	&-item{
 		width: 100%;
 		position: relative;
-		padding: $gutter;
+		padding: 1rem;
 	}
 	.form-text{
 		height: 10em;

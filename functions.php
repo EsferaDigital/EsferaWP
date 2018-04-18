@@ -66,3 +66,5 @@ function url_imagen_destacada($size){
 	//sprintf devuelve el resultado como string
 	return $imagen_destacada[0];
 }
+
+require get_parent_theme_file_path('/inc/formulario.php');
