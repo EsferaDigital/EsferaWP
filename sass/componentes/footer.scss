@@ -1,6 +1,6 @@
 .container-footer{
   display: block;
-  background: color(bg-footer);
+  background: color(footer);
 }
 
 .item-footer{
@@ -30,7 +30,7 @@
 	font-weight: 300;
   text-align: center;
   padding-bottom: .5rem;
-  border-bottom: 1px solid color(hbo);
+  border-bottom: 1px solid color(secondary);
   @include mq($medium){
     width: 100%;
   }
@@ -83,6 +83,38 @@
   }
 }
 
+//Ultimas entradas footer blog
+
+.widgets{
+	text-align: center;
+	margin: 0;
+	& h3{
+		display: none;
+	}
+	& ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	& li{
+		display: block;
+		width: 90%;
+		margin: auto;
+		padding: .5rem;
+	}
+	& a{
+		color: white;
+		padding: .5rem;
+		&:hover{
+			background-color: color(secondary-hover);
+		}
+	}
+}
+
+.post-date{
+	font-size: .7rem;
+}
+
 .copyright{
   display: flex;
   width: 100%;
@@ -90,7 +122,7 @@
   padding: .3rem 0;
   text-align: center;
   flex-wrap: wrap;
-  background-color: #0b1425;
+  background-color: color(primary-dark);
   &-item{
     display: block;
     width: 100%;

@@ -9,10 +9,11 @@ printf('
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<meta name="description" content="' . get_bloginfo('description') . '" />
 	<link rel="icon" type="image/x-icon" href="' . get_bloginfo('template_url') . '/img/favicon.png"/>
-	<link rel="stylesheet" href="https://esferadigital.cl/wp-content/themes/esferagulp/fonts.css" />
+	<link rel="stylesheet" href="http://localhost:8080/esferadigital/wp-content/themes/esferagulp/fonts.css" />
 	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '" />
 ');
 	wp_head();
+	//<link rel="stylesheet" href="https://esferadigital.cl/wp-content/themes/esferagulp/fonts.css" /> para cuando esté online
 	//Si se muestra la barra de wordpress
 	if( is_admin_bar_showing()){
 		printf('

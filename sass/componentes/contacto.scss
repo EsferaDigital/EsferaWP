@@ -1,6 +1,6 @@
 .contacto{
 	padding-top: $top-header;
-	background-color: rgb(58, 61, 78);
+	background-color: color(primary);
 	background-image: url(./img/cafe.jpg);
 	background-position: 50% 90%;
 	background-attachment: fixed;
@@ -17,7 +17,7 @@
 	font-weight: 200;
 	text-align: center; 
 	padding-bottom: .5rem;
-	border-bottom: 1px solid color(hbo);
+	border-bottom: 1px solid color(secondary);
 }
 
 .subtitle{
@@ -42,7 +42,7 @@ input, textarea{
 	background: hsla(210, 42%, 29%, 0.61);
 	transition: all .3s;
 	&:focus{
-		border: 1px solid color(hbo);
+		border: 1px solid color(secondary);
 	}
 	&:valid + .form-label, &:focus + .form-label{
 		top: -.5rem;
@@ -82,7 +82,7 @@ input, textarea{
 		text-transform: uppercase;
 		background: color(btn-cta);
 		&:hover{
-			box-shadow: 1px 1px 1px 1px color(hbo);
+			box-shadow: 1px 1px 1px 1px color(secondary);
 		}
 	}
 }

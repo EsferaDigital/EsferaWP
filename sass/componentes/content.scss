@@ -46,7 +46,7 @@
 	background: url('img/lupa.png') no-repeat center;
 	background-origin: content-box;
 	background-size: contain;
-	background-color: color(hbo);
+	background-color: color(secondary);
 	color: white;
 	cursor: pointer;
 	vertical-align: middle;
@@ -79,7 +79,7 @@
 	text-align: center;
 	& a{
 		border: none !important;
-		color: color(btn-cta);
+		color: color(secondary);
 	}
 	& .nextpostslink, .previouspostslink{
 		font-size: 1.7rem;
@@ -136,7 +136,7 @@
 	//text-align: center;
 	&:hover{
 		--color: white;
-		background-color: color(bg-header);
+		background-color: color(primary);
 		color: var(--color);
 	}
 }
@@ -159,7 +159,7 @@
 	text-align: center;
 	margin-top: .5rem;
 	color: var(--color);
-	border-bottom: 1px solid color(hbo);
+	border-bottom: 1px solid color(secondary);
 }
 
 .extracto{
@@ -179,7 +179,7 @@
 		font-size: .9rem;
 		padding: .4rem;
 		color: white;
-		background-color: color(btn-cta);
+		background-color: color(secondary);
 		line-height: 2;
 		cursor: pointer;
 		&:hover{

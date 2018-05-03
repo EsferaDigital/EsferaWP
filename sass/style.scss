@@ -1,9 +1,15 @@
 @import "reset/reset.scss";
-@import "config/config.scss";
-@import "config/btn.scss";
-@import "config/layout.scss";
+
+@import "config/funciones.scss";
+@import "config/colores.scss";
+@import "config/fuentes.scss";
+@import "config/botones.scss";
 @import "config/generales.scss";
-@import "config/mixin.scss";
+@import "config/layout.scss";
+@import "config/breakpoints.scss";
+
+
+
 
 //Componentes
 

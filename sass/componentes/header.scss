@@ -21,20 +21,23 @@
   margin-left: $gutter;
   height: rem(50px);
   line-height: rem(50px);
-  &:hover{
-	  opacity: .7;
+  @include mq($medium){
+	  width: 45%;
   }
   &-text{
-	  color: color(btn-cta-darken);
-	  font-family: 'Roboto', sans-serif;
+	  color: color(bg-item);
+	  font-family: $primary-font;
 	  //font-size: 5.5vw;
 	  font-size: 1.7rem;
 	  font-weight: 400;
 	  transform: translate(52%, 150%);
 	  transition: all .3s ease;
+	  &:hover{
+		  color: color(secondary);
+	  }
 	  @include mq($medium){
 		  transform: translate(0, 0);
-		  font-size: 1.5rem;
+		  margin-left: $gutter;
 		}
 	}
 }
@@ -42,17 +45,20 @@
 // estilos para funcion scroll
 
 .header-color{
-	background-color: color(bg-header);
+	background-color: color(primary);
 }
 
 .logo-onScroll{
-	width: 40%;
+	width: 45%;
 }
 
 .logo-text-onScroll{
 	font-size: 5.5vw;
 	transform: translate(0, 0);
 	transition: all .3s ease;
+	@include mq($medium){
+		font-size: 1.7rem;
+	}
 }
 
 //Fin estilos para funcion scroll
@@ -77,7 +83,7 @@
 .container-nav{
 	position: fixed;
 	display: flex;
-	background-color: color(bg-footer);
+	background-color: color(primary);
 	top: rem(0px);
 	right: -$off-canvas;
 	width: $off-canvas;
@@ -102,6 +108,7 @@
 	}
 }
 
+//ul
 .menu{
 	padding-left: 0;
 	list-style: none;
@@ -112,7 +119,7 @@
 }
 
 .container-nav li{
-	border-bottom: 1px solid color(hbo);
+	border-bottom: 1px solid color(secondary);
 	@include mq($medium){
 		flex: auto;
 		border-bottom: none;
@@ -130,8 +137,9 @@
 	position: relative;
 	text-transform: uppercase;
 	color: white;
-	font-family: $main-font;
+	font-family: $primary-font;
 	font-weight: $light;
+	letter-spacing: 2px;
 }
 
 .container-nav a:hover{
@@ -139,6 +147,7 @@
 	// width: 90%;
 	// left: 5px;
 	@include mq($medium){
-		background-color: color(btn-cta-darken);
+		//color: color(secondary-hover);
+		background-color: color(logo);
 	}
 }

@@ -2,10 +2,8 @@
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	background-image: img('destacados.jpg');
-	background-position: 50% 5%;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-color: color(bg-container);
+	border: 1px solid red;
 	&::after{
 		content: "";
 		position: absolute;
@@ -13,8 +11,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: color(bg-header);
-		opacity: .7;
+		// background: color(primary);
+		// opacity: .7;
 	}
 	@include mq($medium){
 		padding: $gutter;
@@ -31,17 +29,18 @@
 	margin-top: .5rem;
 	margin-bottom: .5rem;
 	text-align: center;
-	color: white;	
+	color: color(primary-dark);	
 	@include mq($medium){
 		width: 100%;
 	}
 }
 
 .title-destacados span{
+	font-family: $primary-font;
 	font-weight: 400;
 	font-size: 1.5rem;
 	padding-bottom: .5rem;
-	border-bottom: 1px solid color(hbo);
+	border-bottom: 1px solid color(secondary);
 	
 }
 
@@ -50,8 +49,10 @@
 	z-index: 400;
 	display: flex;
 	text-align: center;
+	background-color: color(bg-item);
+	border: 1px solid green;
 	&:hover{
-		background-color: hsla(200, 72%, 50%, 0.3);
+		background-color: color(secondary-hover);
 	}
 	@include mq($medium){
 		margin-top: 1rem;
@@ -67,7 +68,6 @@
 .aside-inicio{
 	margin-bottom: 1px;
    padding: $gutter;
-	color: white;
 	//background-color: color(bg-main);
 	@include mq($medium){
 		margin-bottom: 0;
@@ -76,12 +76,17 @@
 	& span{
 		margin-left: rem(16px);
 		font-size: rem(32px);
+		color: color(secondary);
 	}
 	& h3{
 		padding: rem(6px) 0;
+		font-family: $primary-font;
 		font-weight: 300;
+		color: color(primary-dark);
 	}
 	& p{
+		font-family: $secondary-font;
+		color: black;
 		line-height: 1.5;
 	}
 }

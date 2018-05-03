@@ -7,7 +7,7 @@
 .searchform{
 	width: 25%;
 	padding: $gutter;
-	background-color:rgba(0, 255, 255, 0.5);
+	background-color: color(secondary);
 	float: right;
 	font-size: 0;
 }
@@ -30,7 +30,7 @@
 }
 
 #searchsubmit:hover{
-	background-color:  rgb(0, 255, 255);
+	background-color:  color(secondary-hover);
 }
 
 #s{
