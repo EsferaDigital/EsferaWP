@@ -1,3 +1,24 @@
+<style>
+.logo-container{
+  width: 85%;
+  justify-content: flex-start;
+}
+.logo-container-text{
+  transform: translate(0, 0);
+}
+
+@media screen and (min-width: 768px){
+  .main-header{
+    background-color: #1e2838;
+  }
+  .logo-container{
+    width: 30%;
+  }
+  .logo-container-text{
+    margin-left: 0;
+  }
+}
+</style>
 <div class="contacto">
   <h3 class="title">Contacto</h3>
   <h4 class="subtitle">Cuéntanos sobre tu proyecto y nos pondremos en contacto</h4>
@@ -27,7 +48,7 @@
       </div>
       <div class="form-item">
         <input type="hidden" name="action" value="contactform">
-        <input type="submit" value="Enviar" class="form-button">
+        <input type="submit" value="Enviar" class="form-button boton1">
       </div>
     </form>
   </div>

@@ -4,6 +4,7 @@
 
  //Gutter para las separaciones
 
+ $gutter-large: 2rem;
  $gutter: 1rem;
  $gutter-item: .5rem;
 
@@ -24,7 +25,7 @@
 
 
 
- $top-header: rem(48px);
+ $top-header: rem(50px);
 
 
 @mixin c-wrap{
@@ -104,13 +105,15 @@
 	position: relative;
 	& p{
 		font-size: $font;
+		font-family: $primary-font;
 		color: white;
 		@include mq($medium){
 			font-size: $font;
 		}
 	}
 	& span{
+		font-family: inherit;
 		font-size: inherit;
-		color: color(secondary);
+		color: color(hbo);
 	}
 }

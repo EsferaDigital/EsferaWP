@@ -1,14 +1,14 @@
 .main-header {
 	display: flex;
 	position: fixed;
-	z-index: 999;
+	z-index: z-index(capa7);
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	left: 0;
 	top: 0;
-	height: rem(50px);
-	line-height: rem(50px);
+	height: $top-header;
+	line-height: $top-header;
 	@include mq($medium){
 		justify-content: space-between;
 		padding-top: rem(5px);
@@ -17,27 +17,33 @@
 
 .logo-container{
   display: flex;
-  width: 80%;
+  width: 85%;
   margin-left: $gutter;
-  height: rem(50px);
-  line-height: rem(50px);
+  height: $top-header;
+  line-height: $top-header;
+  justify-content: center;
+  align-items: center;
   @include mq($medium){
-	  width: 45%;
+	  width: 30%;
+	  justify-content: flex-start;
   }
   &-text{
 	  color: color(bg-item);
 	  font-family: $primary-font;
-	  //font-size: 5.5vw;
-	  font-size: 1.7rem;
-	  font-weight: 400;
-	  transform: translate(52%, 150%);
+	  font-size: $sub-title;
+	  font-weight: $bold;
+	  transform: translate(10%, 150%);
 	  transition: all .3s ease;
 	  &:hover{
-		  color: color(secondary);
+		  color: color(hbo);
+	  }
+	  @include mq($movil2){
+		  font-size: $title;
 	  }
 	  @include mq($medium){
 		  transform: translate(0, 0);
-		  margin-left: $gutter;
+		  margin-left: 0;
+		//   border: 1px solid red;
 		}
 	}
 }
@@ -49,15 +55,19 @@
 }
 
 .logo-onScroll{
-	width: 45%;
+	width: 100%;
+	justify-content: flex-start;
+	@include mq($medium){
+		width: 30%;
+	}
 }
 
 .logo-text-onScroll{
-	font-size: 5.5vw;
 	transform: translate(0, 0);
+	margin-left: 0;
 	transition: all .3s ease;
 	@include mq($medium){
-		font-size: 1.7rem;
+		//font-size: $title;
 	}
 }
 
@@ -68,9 +78,9 @@
 	position: relative;
 	float: right;
 	margin-right: $gutter;
-	color: white;
+	color: color(hbo);
 	font-size: 1.8rem;
-	z-index: 210;
+	z-index: z-index(capa3);
 	cursor: pointer;
 	&::before{
 		margin: 0;
@@ -90,7 +100,7 @@
 	height: 100vh;
 	padding: 1rem;
 	padding-top: rem(48px);
-	z-index: 200;
+	z-index: z-index(capa2);
 	transition: all .4s;
 	@include mq($small){
 		//border: 3px solid color(small);
@@ -101,7 +111,7 @@
 	@include mq($medium){
 		background-color: transparent;
 		right: 0;
-		width: 55%;
+		width: 60%;
 		padding: 0 .5rem 0 0;
 		height: auto;
 		position: static;
@@ -115,11 +125,12 @@
 	@include mq($medium){
 		width: 100%;
 		display: flex;
+		// border: 1px solid red;
 	}
 }
 
 .container-nav li{
-	border-bottom: 1px solid color(secondary);
+	border-bottom: 1px solid color(hbo);
 	@include mq($medium){
 		flex: auto;
 		border-bottom: none;
@@ -138,8 +149,11 @@
 	text-transform: uppercase;
 	color: white;
 	font-family: $primary-font;
-	font-weight: $light;
+	font-weight: $normal;
 	letter-spacing: 2px;
+	@include mq($large){
+		font-size: 1.2rem;
+	}
 }
 
 .container-nav a:hover{

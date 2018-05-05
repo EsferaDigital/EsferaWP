@@ -1,9 +1,13 @@
-.contenedor-destacados{
+.c-destacados{
+	--colorbg: white;
+	--colort: #151f31;
+	--colori: #239edb;
+	--colorp: black;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	padding: $gutter-item;
 	background-color: color(bg-container);
-	border: 1px solid red;
 	&::after{
 		content: "";
 		position: absolute;
@@ -18,50 +22,62 @@
 		padding: $gutter;
 		background-position: 50% 25%;
 	}
-}
-
-.title-destacados{
-	display: block;
-	width: 100%;
-	position: relative;
-	z-index: 200;
-	margin: auto;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-	text-align: center;
-	color: color(primary-dark);	
-	@include mq($medium){
+	@include mq($large){
+		padding: $gutter $gutter-large;
+	}
+	&-title{
+		display: block;
 		width: 100%;
+		position: relative;
+		z-index: z-index(capa2);
+		margin: 0 auto $gutter auto;
+		text-align: center;
+		@include mq($medium){
+			width: 100%;
+		}
+		& span{
+			font-family: $primary-font;
+			font-weight: $normal;
+			font-size: $title;
+			color: color(primary-dark);
+			border-bottom: 1px solid color(hbo);
+		}
+	}
+	&-item{
+		position: relative;
+		z-index: z-index(capa4);
+		display: flex;
+		text-align: center;
+		background-color: var(--colorbg);
+		box-shadow: $shadow-flat;
+		margin-bottom: $gutter-item;
+		transition: all .3s;
+		&:hover{
+			--colorbg: #239edb;
+			--colort: white;
+			--colori: white;
+			--colorp: white;
+			background-color: var(--colorbg);
+		}
+		@include mq($medium){
+			margin-top: $gutter;
+			width: 30%;
+			flex: 1 1;
+			margin-right: 3px;
+		}
+		@include mq($large){
+			margin-right: 0;
+			justify-content: space-between;
+		}
+	}
+	&-item:nth-child(odd){
+		margin-left: 1.5rem;
 	}
 }
 
-.title-destacados span{
-	font-family: $primary-font;
-	font-weight: 400;
-	font-size: 1.5rem;
-	padding-bottom: .5rem;
-	border-bottom: 1px solid color(secondary);
-	
-}
-
-.inicio{
-	position: relative;
-	z-index: 400;
-	display: flex;
-	text-align: center;
-	background-color: color(bg-item);
-	border: 1px solid green;
-	&:hover{
-		background-color: color(secondary-hover);
-	}
-	@include mq($medium){
-		margin-top: 1rem;
-		width: 30%;
-		flex: 1 1;
-		margin-right: 3px;
-	}
-	@include mq($x-large){
-
+.adaptable{
+	@include mq($large){
+		margin-left: 1.5rem;
 	}
 }
 
@@ -74,19 +90,19 @@
 		padding: 1rem;
 	}
 	& span{
+		color: var(--colori);
 		margin-left: rem(16px);
 		font-size: rem(32px);
-		color: color(secondary);
 	}
 	& h3{
 		padding: rem(6px) 0;
 		font-family: $primary-font;
 		font-weight: 300;
-		color: color(primary-dark);
+		color: var(--colort);
 	}
 	& p{
 		font-family: $secondary-font;
-		color: black;
+		color: var(--colorp);
 		line-height: 1.5;
 	}
 }

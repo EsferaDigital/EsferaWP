@@ -1,12 +1,12 @@
-	<footer class="container-footer">
-		<section class="item-footer">
-			<aside class="container-aside-footer">
-				<h4 class="title-aside-footer">Esfera Digital</h4>
+	<footer class="c-footer">
+		<section class="c-footer-item">
+			<aside class="c-footer-aside">
+				<h4 class="c-footer-aside-title">Esfera Digital</h4>
 				<p>Somos una Agencia Digital joven y dinámica. Nuestra propuesta es la entrega de un servicio cuidado, que acerque el desarrollo tecnológico a las personas, comunicando lo que hacemos y las posibilidaes que hoy ofrece la tecnología, en un lenguaje sencillo. Entendemos que cada cliente es único y trabajamos por crear una identidad digital que refleje dicha unicidad.
 				</p>
 			</aside>
-			<aside class="container-aside-footer">
-				<h4 class="title-aside-footer">Síguenos</h4>
+			<aside class="c-footer-aside">
+				<h4 class="c-footer-aside-title">Síguenos</h4>
 				<section class="social">
 					<a class="social-icon icon-facebook" href="https://www.facebook.com/miesferadigital/" target="_blank">
 					</a>
@@ -18,8 +18,8 @@
 					</a>
 				</section>
 			</aside>
-			<aside class="container-aside-footer">
-				<h4 class="title-aside-footer">Blog</h4>
+			<aside class="c-footer-aside">
+				<h4 class="c-footer-aside-title">Blog</h4>
 				<?php
 				printf('<section class="footer-blog">');
 				dynamic_sidebar(2);
