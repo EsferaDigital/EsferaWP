@@ -1,6 +1,5 @@
 .banner{
 	@include banner(img('banner-mobile.jpg'));
-	box-shadow: $shadow-flat;
 	margin-bottom: $gutter-item;
 	@include mq($medium){
 		@include banner(img('banner.jpg'));

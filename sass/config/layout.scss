@@ -82,6 +82,7 @@
 	background-size: cover;
 	background-position: center;
 	background-image: $imagen;
+	box-shadow: $shadow-flat;
 	&::before{
 		content: "";
 		position: absolute;

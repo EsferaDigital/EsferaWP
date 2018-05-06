@@ -1,8 +1,4 @@
 .c-destacados{
-	--colorbg: white;
-	--colort: #151f31;
-	--colori: #239edb;
-	--colorp: black;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -40,7 +36,7 @@
 			font-weight: $normal;
 			font-size: $title;
 			color: color(primary-dark);
-			border-bottom: 1px solid color(hbo);
+			//border-bottom: 1px solid color(hbo);
 		}
 	}
 	&-item{
@@ -48,17 +44,14 @@
 		z-index: z-index(capa4);
 		display: flex;
 		text-align: center;
-		background-color: var(--colorbg);
+		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
 		margin-bottom: $gutter-item;
 		transition: all .3s;
-		&:hover{
-			--colorbg: #239edb;
-			--colort: white;
-			--colori: white;
-			--colorp: white;
-			background-color: var(--colorbg);
-		}
+		// &:hover{
+		// 	transform: scale(1.07);
+		// 	background-color: var(--colorbg);
+		// }
 		@include mq($medium){
 			margin-top: $gutter;
 			width: 30%;
@@ -71,7 +64,9 @@
 		}
 	}
 	&-item:nth-child(odd){
-		margin-left: 1.5rem;
+		@include mq($large){
+			margin-left: 1.5rem;
+		}
 	}
 }
 
@@ -90,20 +85,28 @@
 		padding: 1rem;
 	}
 	& span{
-		color: var(--colori);
+		color: color(hbo);
 		margin-left: rem(16px);
 		font-size: rem(32px);
 	}
-	& h3{
+	& h2{
 		padding: rem(6px) 0;
 		font-family: $primary-font;
-		font-weight: 300;
-		color: var(--colort);
+		font-weight: $light;
+		color: color(primary-dark);
 	}
 	& p{
 		font-family: $secondary-font;
-		color: var(--colorp);
+		color: black;
 		line-height: 1.5;
+	}
+}
+
+.fondo-destacados{
+	background-color: color(secondary-hover);
+	& h3{
+		font-family: $primary-font;
+		color: white;
 	}
 }
 

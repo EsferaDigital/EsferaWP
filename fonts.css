@@ -116,3 +116,21 @@
 .icon-map-pin:before {
   content: "\7a";
 }
+.icon-users:before {
+  content: "\41";
+}
+.icon-paper:before {
+  content: "\42";
+}
+.icon-like:before {
+  content: "\43";
+}
+.icon-like-solid:before {
+  content: "\44";
+}
+.icon-design-box:before {
+  content: "\45";
+}
+.icon-publish:before {
+  content: "\46";
+}
