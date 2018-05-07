@@ -5,7 +5,7 @@
 	color: white;
 	// border: 1px solid red;
 	@include mq($medium){
-
+		padding: $gutter-item $gutter;
 	}
 	&-title{
 		width:100%;
@@ -13,7 +13,7 @@
 		text-align: center;
 		padding: $gutter;
 		padding-bottom: 0;
-		border: 1px solid red;
+		// border: 1px solid red;
 		& h1{
 			padding: $gutter;
 			font-family: $primary-font;
@@ -29,7 +29,7 @@
 				align-items: center;
 				line-height: 1.7;
 				padding: 0;
-				border: 1px solid green;
+				// border: 1px solid green;
 			}
 		}
 		@include mq($medium){
@@ -44,7 +44,7 @@
 		display:flex;
 		flex-wrap: wrap;
 		padding: $gutter;
-		border: 1px solid blue;
+		// border: 1px solid blue;
 		@include mq($medium){
 			width: 70%;
 			padding: 0;
@@ -59,17 +59,33 @@
 			font-size: $sub-title;
 			box-shadow: $shadow-flat;
 			background-color: color(bg-item);
+			// border: 1px solid red;
 			@include mq($medium){
-				width: 50%;
+				width: 47%;
+				flex: auto;
+				margin-bottom: 0;
+				margin: $gutter-item $gutter-item $gutter-item 0;
 			}
 			& span{
 				color: color(hbo);
 			}
 			& h3{
 				padding: $gutter-item 0;
+				font-family: $primary-font;
+				@include mq($medium){
+					font-size: 1.2rem;
+				}
 			}
 			& p{
 				color: black;
+				font-family: $secondary-font;
+			}
+			//para seleccionar las cajas 1 y 2
+			&:nth-child(-n+2){
+				@include mq($medium){
+					// border: 2px solid yellow;
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -93,26 +109,39 @@
 	flex-wrap: wrap;
 	padding: $gutter-item;
 	background-color: color(secondary-hover);
+	// border: 3px solid red;
+	@include mq($medium){
+		// padding: $gutter-item $gutter;
+	}
 	&-item{
 		display: flex;
 		width: 100%;
 		text-align: center;
 		background-color: color(bg-item);
 		margin-bottom: 2px;
-		// border: 1px solid red;
+		border: 1px solid color(secondary-hover);
 		@include mq($medium){
 			display: block;
-			flex: 1 1 16%;
+			margin: 0 auto;
+			flex: 1 1 32%;
 		}
 		&-text{
 			width: 85%;
 			padding: $gutter-item;
 			padding-left: 0;
 			text-align: start;
+			// border: 1px solid yellow;
+			@include mq($medium){
+				margin: auto;
+				padding-left: $gutter-item;
+			}
 			& h2{
 				font-family: $primary-font;
 				font-size: 1.3rem;
 				color: color(primary-dark);
+				@include mq($medium){
+					font-size: 1.2rem;
+				}
 			}
 			& p{
 				font-family: $secondary-font;
