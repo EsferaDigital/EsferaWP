@@ -1,35 +1,90 @@
 .post{
+	width: 100%;
 	max-width: $max-width;
 	margin: auto;
+	background-color: color(bg-container);
+	padding: $gutter 0;
+	// border: 1px solid red;
 	&-item{
 		width: 90%;
 		margin: auto;
+		background-color: color(bg-item);
+		box-shadow: $shadow-flat;
+		// border: 1px solid blue;
 	}
 	&-title{
-		width: 90%;
+		width: 80%;
 		margin: $gutter auto;
 		text-align: center;
-		padding-bottom: .5rem;
-		border-bottom: 1px solid color(primary);
-		font-size: 1.5rem;
-		color: black;
+		padding: $gutter-item 0;
+		border-bottom: 1px solid color(hbo);
+		font-family: $primary-font;
+		font-size: 1.2rem;
+		color: color(primary-dark);
+		@include mq($small){
+			width: 50%;
+			font-size: 1.5rem;
+		}
+		@include mq($medium){
+			width: 40%;
+		}
+		@include mq($large){
+			width: 25%;
+		}
 	}
 	&-img{
+		width: 100%;
 		max-width: 100%;
+		@include mq($small){
+			padding: $gutter-item;
+			padding-top: 0;
+		}
+		@include mq($medium){
+			padding: $gutter;
+			padding-top: 0;
+		}
+		@include mq($large){
+			height: 400px;
+			overflow: hidden;
+		}
 	}
 	&-content{
-		background-color: whitesmoke;
-		padding: $gutter;
+		padding: $gutter-item;
+		font-family: $secondary-font;
+		font-size: .9rem;
+		letter-spacing: 2px;
+		@include mq($small){
+			font-size: 1rem;
+			padding: $gutter-item;
+		}
+		@include mq($medium){
+			padding: $gutter;
+		}
+		@include mq($large){
+			padding: $gutter-large;
+		}
 	}
 	&-autor{
-		font-size: 1.2rem;
+		padding: $gutter-item;
+		font-family: $primary-font;
+		font-size: 1rem;
+		@include mq($small){
+			padding: $gutter;
+		}
+		@include mq($large){
+			padding: $gutter $gutter-large;
+		}
 	}
 }
 
-//Estilos para comentarios, no los toma
-#comments-evolved-tabs{
-	width: 90% !important;
-	margin: auto;
-	border: 1px solid red;
+
+
+//Estilos para comentarios
+
+.fb-comments{
+	width: 100%;
+	& span{
+		width: 100% !important;
+	}
 }
 

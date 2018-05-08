@@ -8,10 +8,12 @@ printf('<main class="post">');
 					<h1 class="post-title">%s</h1>
 					<div class="post-img">%s</div>
 					<p class="post-content">%s</p>
-					<p class="post-autor">%s</p>
-					<p class="post-date">%s - %s</p>
-					<p class="post-categories">%s</p>
-					<p class="post-tag>%s</p>
+					<div class="post-autor">
+						<p class="post-autor-name">%s</p>
+						<p class="post-autor-date">%s - %s</p>
+						<p class="post-autor-categories">%s</p>
+						<p class="post-autor-tag>%s</p>
+					</div>
 				</article>
 			';
 

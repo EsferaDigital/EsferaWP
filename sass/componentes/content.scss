@@ -1,16 +1,20 @@
-.blog-container{
+.c-blog{
 	display: block;
+	width: 100%;
+	max-width: $max-width;
 	margin: auto;
 	height: auto;
-	max-width: $max-width;
-	background-color: white;
+	background-color: color(bg-container);
 }
 
 //Caja de busquedas
 
 .buscar{
 	display: flex;
+	width: 100%;
 	flex-direction: row-reverse;
+	padding: $gutter-item;
+	background-color: color(bg-container);
 }
 
 .searchform{
@@ -68,9 +72,105 @@
 
 //fin caja de busqueda
 
+// Contenido del blog
+
+.content-blog{
+	display: flex;
+	width: 95%;
+	margin: auto;
+	flex-wrap: wrap;
+	background-color: color(bg-container);
+	// border: 1px solid red;
+	@include mq($medium){
+		display: grid;
+		grid-template-columns: 0 1fr 5px 1fr;
+	}
+	@include mq($large){
+		grid-template-columns: 0 1fr 5px 1fr 5px 1fr;
+	}
+	&-item{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: $gutter-item;
+		padding: $gutter;
+		box-shadow: $shadow-flat;
+		background-color: color(bg-item);
+		// border: 1px solid green;
+		@include mq($medium){
+			margin: 0;
+			margin-bottom: 5px;
+		}
+		&-img{
+			width: 100%;
+			height: auto;
+			// border: 1px solid red;
+		}
+		&-title{
+			width: 100%;
+			padding: $gutter-item $gutter-item 0;
+			font-family: $primary-font;
+			font-size: 1.5rem;
+			text-align: center;
+			color: color(primary-dark);
+			border-bottom: 1px solid color(hbo);
+		}
+		&-extracto{
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: $gutter-item;
+			width: 100%;
+			font-family: $secondary-font;
+			color: black;
+			// border: 1px solid blue;
+			@include mq($medium){
+				padding: $gutter-item $gutter 0;
+			}
+			& a{
+				width: 100%;
+				color: inherit;
+			}
+			& small{
+				display: block;
+				width: 45%;
+				margin-left: 55%;
+				margin-top: $gutter-item;
+				padding: .3rem;
+				font-family: $secondary-font;
+				text-align: center;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-size: .8rem;
+				color: white;
+				background-color: color(secondary);
+				line-height: 2;
+				cursor: pointer;
+				&:hover{
+					background-color: color(secondary-hover);
+				}
+				&:active{
+					transform: scale(.95);
+				}
+			}
+		}
+		&-date{
+			width: 100%;
+			font-size: .9rem;
+			color: black;
+			@include mq($medium){
+				margin-left: $gutter;
+			}
+		}
+	}
+}
+
 //Paginación
 
 .paginacion{
+	font-family: $secondary-font;
 	display: block;
 	text-align: center;
 }
@@ -104,92 +204,3 @@
 //Fin paginación
 
 //Grid context
-.blog-grid-container{
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto;
-	padding: 0 $gutter;
-	@include mq($medium){
-		display: grid;
-		grid-gap: .7rem;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, auto);
-	}
-	@include mq($large){
-		grid-gap: 1rem;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, auto);
-	}
-}
-
-.blog-grid-item{
-	--color: black;
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
-	height: auto;
-	margin-bottom: $gutter;
-	padding: $gutter;
-	color: var(--color);
-	align-items: flex-start;
-	//text-align: center;
-	&:hover{
-		--color: white;
-		background-color: color(primary);
-		color: var(--color);
-	}
-}
-
-.blog-img{
-	max-width: 90%;
-	height: auto;
-	margin: .7rem;
-	text-align: center;
-	@include mq($medium){
-		max-width: 100%;
-		margin: 0;
-	}
-}
-
-.blog-title{
-	display: inline-block;
-	width: 90%;
-	font-size: 1.5rem;
-	text-align: center;
-	margin-top: .5rem;
-	color: var(--color);
-	border-bottom: 1px solid color(secondary);
-}
-
-.extracto{
-	margin: .5rem 0;
-	& a{
-		color: inherit;
-		&:hover{
-			color: inherit;
-		}
-	}
-	& small{
-		//leer más
-		display: block;
-		width: 40%;
-		margin-top: .5rem;
-		text-align: center;
-		font-size: .9rem;
-		padding: .4rem;
-		color: white;
-		background-color: color(secondary);
-		line-height: 2;
-		cursor: pointer;
-		&:hover{
-			opacity: .7;
-		}
-		@include mq($medium){
-			width: auto;
-			line-height: 1.5;
-		}
-	}
-}
-
-.fecha{width: 100%}

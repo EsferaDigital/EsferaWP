@@ -1,38 +1,34 @@
 <?php
-printf('<main class="blog-container">');
+printf('<main class="c-blog">');
 	printf('<aside class="buscar">' . get_search_form(false) . '</aside>');
-		printf('<section class="blog-grid-container">');
-			if( have_posts() ):
-				while( have_posts() ):
-					the_post();
-					$template_html = '
-						<aside class="blog-grid-item">
-							<figure>
-								<a href="%s">
-									<img class="blog-img" src="%s">
-									<figcapion class="blog-title">%s</figcaption>
-									<p class="extracto">%s</p>
-									<p class="fecha">%s</p>
-								</a>
-							</figure>
-						</aside>
-					';
-
-					printf(
-						$template_html,
-						get_permalink(),
-						url_imagen_destacada('thumbnail'),
-						get_the_title(),
-						get_the_excerpt(),
-						get_the_date()
-					);
-					
-				endwhile;
-			else:
-				printf('<p class="error">No hay entradas</p>');
-			endif;
-			rewind_posts();
-		printf('</section>');
+	printf('<section class="content-blog">');
+		if( have_posts() ):
+			while( have_posts() ):
+				the_post();
+				$template_html = '
+				<a href="%s">
+					<article class="content-blog-item">
+						<img class="content-blog-item-img" src="%s"/>
+						<h2 class="content-blog-item-title">%s</h2>
+						<p class="content-blog-item-extracto">%s</p>
+						<p class="content-blog-item-date">%s</p>
+					</article>
+				</a>';
+				printf(
+					$template_html,
+					get_permalink(),
+					url_imagen_destacada('thumbnail'),
+					get_the_title(),
+					get_the_excerpt(),
+					get_the_date()
+				);
+				
+			endwhile;
+		else:
+			printf('<p class="error">No hay entradas</p>');
+		endif;
+		rewind_posts();
+	printf('</section>');
 	printf('<div class="paginacion">');
 		wp_pagenavi();
 	printf('</div>');
