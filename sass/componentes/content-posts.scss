@@ -77,6 +77,26 @@
 	}
 }
 
+//estilos si no hay entradas(para content o content-posts)
+
+.c-empty{
+	display: flex;
+	width: 90vw;
+	height: 500px;
+	margin: $gutter auto;
+	justify-content: center;
+	align-items: center;
+	padding: $gutter-large;
+	background-color: color(bg-item);
+	color: color(primary-dark);
+	font-family: $primary-font;
+	font-size: $big-title;
+	box-shadow: $shadow-flat;
+	@include mq($medium){
+		width: 95vw;
+	}
+}
+
 
 
 //Estilos para comentarios

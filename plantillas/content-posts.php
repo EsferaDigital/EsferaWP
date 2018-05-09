@@ -31,7 +31,7 @@ printf('<main class="post">');
 			);
 		endwhile;
 	else:
-		printf('<p class="error">No hay entradas</p>');
+		printf('<p class="c-empty">No hay coincidencias con tu búsqueda</p>');
 	endif;
 	rewind_posts();
 printf('</main>');

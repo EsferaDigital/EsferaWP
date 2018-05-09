@@ -25,7 +25,12 @@ printf('<main class="c-blog">');
 				
 			endwhile;
 		else:
-			printf('<p class="error">No hay entradas</p>');
+			printf('<style>.content-blog{
+				display: flex;
+				width: 100%;
+				height: 80vh;
+			}</style>');
+			printf('<p class="c-empty">No hay coincidencias con tu búsqueda</p>');
 		endif;
 		rewind_posts();
 	printf('</section>');

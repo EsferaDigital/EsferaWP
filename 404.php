@@ -1,13 +1,28 @@
+<style>
+.main-header{
+	background-color: #1e2838;
+}
+
+#logoContainer{
+	justify-content: flex-start;
+}
+
+#logoText{
+	transform: translate(0, 0);
+}
+
+</style>
 <?php
 get_header();
 printf('
+	<div class="cajaerror"</div>
+	<div class="buscar">' . get_search_form(false) . '</div>
 	<section class="error">
-		<div class="buscar">' . get_search_form(false) . '</div>
 		<h1 class="error-title">Error</h1>
 		<p class="error-subtitle">Página no encontrada</p>
 		<div class="error-main">
 			<p>4</p>
-			<img src="http://localhost:8080/esferadigital/wp-content/uploads/2018/03/logo.png"></img>
+			<img src="https://esferadigital.cl/wp-content/uploads/2018/03/logo.png"></img>
 			<p>4</p>
 		</div>
 		<div class="error-text">

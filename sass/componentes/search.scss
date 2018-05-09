@@ -1,0 +1,14 @@
+.c-search{
+	padding: 4rem $gutter $gutter;
+	text-align: center;
+	background-color: color(secondary);
+	font-family: $primary-font;
+	font-size: $title;
+	color: white;
+	// border: 1px solid red;
+	& span{
+		text-transform: uppercase;
+		font-weight: 500;
+		color: white;
+	}
+}
