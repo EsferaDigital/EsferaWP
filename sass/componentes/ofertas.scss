@@ -1,0 +1,121 @@
+.ofertas{
+	font-family: $primary-font;
+	// border: 3px solid blue;
+	background-color: color(bg-container);
+}
+
+.c-ofertas{
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	padding: $gutter-item 0;
+	margin: auto;
+	// border: 2px solid green;
+	@include mq($medium){
+		padding: $gutter 0;
+		width: 95%;
+	}
+	&-item{
+		background-color: color(bg-item);
+		// border: 3px solid red;
+		flex: auto;
+		margin-bottom: $gutter-item;
+		box-shadow: $shadow-flat;
+		@include mq($medium){
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex: 1 0 30%;
+			margin-right: $gutter-item;
+		}
+		&-title{
+			text-align: center;
+			padding: $gutter-item;
+			background-color: color(secondary-hover);
+			font-size: 2rem;
+			letter-spacing: 2px;
+			color: white;
+			@include mq($medium){
+				font-size: 1.5rem;
+			}
+		}
+		&-price{
+			width: 90%;
+			margin: .3rem auto;
+			text-align: center;
+			font-family: $secondary-font;
+			align-self: flex-start;
+			font-size: 1.8rem;
+			letter-spacing: 1.5px;
+			// border: 1px solid red;
+			@include mq($medium){
+				font-size: 1.5rem;
+			}
+			& span{
+				font-size: .9rem;
+				@include mq($medium){
+					font-size: .8rem;
+				}
+			}
+		}
+		&-detail{
+			padding: .3rem;
+			// border: 1px solid green;
+			@include mq($large){
+				width: 70%;
+				margin: auto;
+			}
+		}
+		&-detail li{
+			padding: .3rem 0;
+			font-family: $secondary-font;
+			list-style: disc inside;
+			text-indent: 3px;
+			@include mq($medium){
+				font-size: .9rem;
+			}
+		}
+		&-footer{			
+			padding: $gutter-item;
+		}
+		&-footer p{
+			font-family: $secondary-font;
+			font-size: .9rem;
+			@include mq($medium){
+				font-size: .7rem;
+			}
+		}
+	}
+	&-item:last-child{
+		@include mq($medium){
+			margin-right: 0;
+		}
+	}
+}
+
+.boton-ofertas{
+	width: 70%;
+	background-color: color(logo);
+	margin: 0 auto;
+	text-align: center;
+	align-self: flex-end;
+	@include mq($movil1){
+		width: 60%;
+	}
+	@include mq($movil2){
+		width: 50%;
+	}
+	@include mq($small){
+		width: 40%;
+	}
+	@include mq($medium){
+		width: 80%;
+	}
+	@include mq($large){
+		margin: $gutter-item auto;
+		width: 50%;
+	}
+	&:hover{
+		background-color: color(logo-light);
+	}
+}
