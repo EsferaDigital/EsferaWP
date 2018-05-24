@@ -1,5 +1,5 @@
 .banner{
-	@include banner(img('banner-mobile.jpg'));
+	@include banner (img('banner-mobile.jpg'));
 	margin-bottom: $gutter-item;
 	@include mq($medium){
 		@include banner(img('banner.jpg'));

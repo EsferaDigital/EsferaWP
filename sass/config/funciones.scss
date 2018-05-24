@@ -28,10 +28,10 @@
   // Funcion para obtener imagenes
 
   @function img($img) {
-    //Online
-    //@return url('/img/' + $img);
+    // Online
+    @return url('./img/' + $img);
     // En local
-    @return url('/esferadigital/wp-content/themes/esferagulp/img/' + $img);
+    // @return url('/esferadigital/wp-content/themes/esferagulp/img/' + $img);
   }
 
   // Convertir px a em

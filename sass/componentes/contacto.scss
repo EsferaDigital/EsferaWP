@@ -8,7 +8,7 @@
 	background-repeat: no-repeat;
 	@include mq($medium){
 		height: 100vh;
-		background-image: url(./img/cafe-large.jpg);
+		background-image: url("./img/cafe-large.jpg");
 	}
 }
 
