@@ -29,7 +29,7 @@
   <?php endif; ?>
   <?php if(isset($_GET['exito'])):?>
   <div>
-    <p>Su email ha sido enviado</p>
+    <p>Gracias por escribirnos, le responderemos en breve</p>
   </div>
   <?php endif; ?>
   <div class="form">

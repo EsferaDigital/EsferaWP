@@ -39,6 +39,13 @@
 	text-align: center;
 }
 
+.respuesta{
+	text-align: center;
+	font-family: $primary-font;
+	font-size: 1.5rem;
+	color: white;
+}
+
 input, textarea{
 	width: 100%;
 	outline: 0;

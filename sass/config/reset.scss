@@ -1,14 +1,11 @@
 html {
   box-sizing: border-box;
-  font-family: helvetica, sans-serif;
-  font-size: 16px;
   background-color: #fff;
   color: #000; 
 }
 
 body{
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
 }
 
 /*Además, todo lo que haga antes y despues, añadeles un box-sizing heredaddo (inherit). Toma el valor del elemento padre. Con ello logramos que los elementos contenedores no hagan crecer la caja cuando tienen padding. También, reseteamos los margines y padding y el tamaño de letra*/
@@ -17,20 +14,10 @@ body{
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-} 
- 
-a{text-decoration: none;}
-h1{font-size: 2rem;}
-h2{font-size: 1.75rem;}
-h3{font-size: 1.5rem;}
-h4{font-size: 1.25rem;}
-
-h5, a, abbr, b, code, dfn, em, i, li, mark, p, pre, strong{
-  font-size: 1rem;
 }
 
-h6, small{font-size: .75rem;}
-
+a{text-decoration: none;}
+ 
 li{
   margin-left: 0;
   list-style-type: inherit;
@@ -52,7 +39,7 @@ hr{
   border: thin solid #000;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary, button{display: block;}
+article, aside, details, img, figcaption, figure, footer, header, main, menu, nav, section, summary, button{display: block;}
 
 table{border-collapse: collapse;}
 

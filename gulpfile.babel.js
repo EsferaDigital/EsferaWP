@@ -38,12 +38,12 @@ gulp.task('sass', function(){
 });
 
 gulp.task('lint', function () {
-	return gulp.src('./js/custom/**/*.js')
+	return gulp.src('./js/custom/**.js')
 		.pipe(jshint())
 });
 
 gulp.task('javascript', ['lint'], function() {
-	return gulp.src('./js/custom/**/*.js')
+	return gulp.src('./js/custom/**.js')
 		.pipe(babel())
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(concat('all.min.js'))
