@@ -9,12 +9,11 @@ printf('
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<meta name="description" content="' . get_bloginfo('description') . '" />
 	<link rel="icon" type="image/x-icon" href="' . get_bloginfo('template_url') . '/img/favicon.png"/>
-	<link rel="stylesheet" href="https://esferadigital.cl/wp-content/themes/esferagulp/fonts.css" />
+	<link rel="stylesheet" href="http://localhost:8080/esferadigital/wp-content/themes/esferagulp/fonts.css" />
 	<link rel="stylesheet" href="' . get_bloginfo('stylesheet_url') . '" />
 ');
 	wp_head();
-	//<link rel="stylesheet"
-	// href="http://localhost:8080/esferadigital/wp-content/themes/esferagulp/fonts.css " /> para cuando esté ofline
+	//<link rel="stylesheet" href="https://esferadigital.cl/wp-content/themes/esferagulp/fonts.css" />" /> para cuando esté ofline
 	//Si se muestra la barra de wordpress
 	if( is_admin_bar_showing()){
 		printf('
@@ -29,7 +28,7 @@ printf('
 printf('
 </head>
 <body>
-	<header id="mainHeader" class="main-header">
+	<header id="mainHeader" class="main-header slide-top">
 		<h1 id="logoContainer" class="logo-container">
 			<a id="logoText" class="logo-container-text" href="https://esferadigital.cl">Esfera Digital</a>
 		</h1>

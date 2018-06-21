@@ -22,7 +22,7 @@ printf('
 		<p class="error-subtitle">Página no encontrada</p>
 		<div class="error-main">
 			<p>4</p>
-			<img src="https://esferadigital.cl/wp-content/uploads/2018/03/logo.png"></img>
+			<img src="https://esferadigital.cl/wp-content/uploads/2018/05/logo.png"></img>
 			<p>4</p>
 		</div>
 		<div class="error-text">

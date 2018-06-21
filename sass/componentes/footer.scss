@@ -1,6 +1,7 @@
 .c-footer{
   display: block;
   background: color(footer);
+  border: 2px solid purple;
   &-item{
     display: flex;
     flex-wrap: wrap;

@@ -11,12 +11,12 @@
   }
 
   // ejemplo de uso
-  .button-ej{
-    @include button-ejemplo(3,1rem);
-    &-small{
-      @include button-ejemplo(2.5,0.8rem);
-    }
-  }
+  // .button-ej{
+  //   @include button-ejemplo(3,1rem);
+  //   &-small{
+  //     @include button-ejemplo(2.5,0.8rem);
+  //   }
+  // }
 
   // Mixin con selectores adentro
 
@@ -31,9 +31,9 @@
 
   // ejemplo de uso
 
-  .nada{
-    @include nada(1em,Arial,blue);
-  }
+  // .nada{
+  //   @include nada(1em,Arial,blue);
+  // }
 
   // Mixin con múltiples argumentos
 
@@ -43,6 +43,6 @@
 
   // ejemplo de uso
 
-  .box{
-    @include multiple(1px solid red, 2px solid blue, 5px solid white);
-  }
+  // .box{
+  //   @include multiple(1px solid red, 2px solid blue, 5px solid white);
+  // }

@@ -28,7 +28,7 @@
 
 //Creamos clases predeterminadas
 
-.fadein, .fade-in{@include fadeIn(1s);}
+.fadein, .fade-in{@include fadeIn(5s);}
 .fadeout, .fade-out{	@include fadeOut(1s);}
 
 //Nota: Podemos usar los mixin o aplicar las clases al elemento que queramos animar

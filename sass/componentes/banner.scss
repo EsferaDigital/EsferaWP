@@ -1,6 +1,5 @@
 .banner{
 	@include banner (img('banner-mobile.jpg'));
-	margin-bottom: $gutter-item;
 	@include mq($medium){
 		@include banner(img('banner.jpg'));
 	}
@@ -14,7 +13,13 @@
 	}
 	&-logo{
 		width: 40vw;
-		margin-bottom: $gutter;
+		margin-top: 2rem;
+		@include mq($movil3){
+			width: 20vw;
+			margin-bottom: 0;
+			margin-top: 3rem;
+			// border: 2px solid yellow;
+		}
 		@include mq($medium){
 			width: 23vw;
 			margin-bottom: 0;
@@ -24,9 +29,17 @@
 		}
 	}
 	&-subtitle{
-		padding: 0 $gutter $gutter;
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
 		font-size: 1.5rem;
 		margin-bottom: $gutter;
+		@include mq($movil3){
+			margin-top: 0;
+			font-size: 1.2rem;
+			// border: 2px solid green;
+		}
 		@include mq($medium){
 			width: 60%;
 			font-size: 1.7rem;

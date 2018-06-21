@@ -9,9 +9,6 @@
 	top: 0;
 	height: $top-header;
 	line-height: $top-header;
-	@include mq($medium){
-		justify-content: space-between;
-  }
 }
 
 .logo-container{
@@ -22,22 +19,25 @@
   line-height: $top-header;
   justify-content: center;
   align-items: center;
+//   border: 3px solid red;
   @include mq($medium){
 	  width: 30%;
 	  justify-content: flex-start;
   }
   &-text{
 	  color: color(bg-item);
-	  font-family: $primary-font;
-	  font-size: $sub-title;
+	  font-size: 1.5rem;
 	  font-weight: $bold;
 	  transform: translate(10%, 120%);
 	  transition: all .3s ease;
 	  &:hover{
 		  color: color(hbo);
 	  }
-	  @include mq($movil2){
-		  font-size: $title;
+	  @include mq($movil1){
+		  font-size: 1.7rem;
+	  }
+	  @include mq($movil3){
+		  transform: translate(12%, 70%);
 	  }
 	  @include mq($medium){
 		  transform: translate(0, 0);
@@ -98,6 +98,7 @@
 	padding-top: $top-header;
 	z-index: z-index(capa2);
 	transition: all .4s;
+	border: 3px solid yellow;
 	@include mq($small){
 		//border: 3px solid color(small);
 	}
@@ -111,6 +112,7 @@
 		padding: 0 .5rem 0 0;
 		height: auto;
 		position: static;
+		// border: 1px solid red;
 	}
 }
 

@@ -1,7 +1,7 @@
 'use strict'
 
 //tope de ventana  + ((altura de ventana *2) / 5)
-const windowTop = window.pageYOffset + ((window.innerHeight * 2) / 5);
+const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 6);
 const target = document.querySelectorAll('[data-anime]');
 
 function animaScroll(){
