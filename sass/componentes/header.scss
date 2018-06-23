@@ -98,10 +98,10 @@
 	padding-top: $top-header;
 	z-index: z-index(capa2);
 	transition: all .4s;
-	border: 3px solid yellow;
-	@include mq($small){
-		//border: 3px solid color(small);
-	}
+	// border: 3px solid yellow;
+	// @include mq($small){
+	// 	//border: 3px solid color(small);
+	// }
 	&.mostrar{
 		right: 0;
 	}

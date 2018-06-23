@@ -5,24 +5,40 @@
 	}
 	&-logo,
 	&-subtitle{
-		font-family: $primary-font;
 		font-size: $sub-title;
 		font-weight: $normal;
 		position: relative;
 		color: white;
 	}
 	&-logo{
-		width: 40vw;
-		margin-top: 2rem;
+		width: 40%;
+		height: 40%;
+		transform: translate3d(0, -10%, 0);
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: (img('logo.svg'));
+		// border: 2px solid red;
+		@include mq($movil1){
+			margin-top: 1rem;
+		}
 		@include mq($movil3){
-			width: 20vw;
-			margin-bottom: 0;
-			margin-top: 3rem;
+			width: 30%;
+			height: 30%;
+			transform: translate3d(0, 15%, 0);
 			// border: 2px solid yellow;
 		}
 		@include mq($medium){
-			width: 23vw;
-			margin-bottom: 0;
+			width: 50%;
+			height: 20%;
+			transform: translate3d(0, -100%, 0);
+			margin-bottom: 2rem;
+			// border: 2px solid green;
+		}
+		@include mq($s-large){
+			width: 40%;
+			height: 30%;
+			transform: translate3d(0, -30%, 0);
 		}
 		@include mq($large){
 			width: 18vw;
@@ -34,14 +50,20 @@
 		margin: 0 auto;
 		padding: 0;
 		font-size: 1.5rem;
+		transform: translate3d(0, -50%, 0);
 		margin-bottom: $gutter;
+		@include mq($movil1){
+			margin-top: 1rem;
+		}
 		@include mq($movil3){
-			margin-top: 0;
+			width: 70%;
+			transform: translate3d(0, -20%, 0);
 			font-size: 1.2rem;
 			// border: 2px solid green;
 		}
 		@include mq($medium){
 			width: 60%;
+			transform: translate3d(0, -100%, 0);
 			font-size: 1.7rem;
 			margin-bottom: 0;
 		}
@@ -54,6 +76,21 @@
 	}
 	& a{
 		position: relative;
+		margin-top: 1rem;
+		@include mq($movil1){
+			// border: 2px solid green;
+			margin-top: 3rem;
+		}
+		@include mq($movil3){
+			transform: translate3d(0, 20%, 0);
+			margin-top: .5rem;
+		}
+		@include mq($medium){
+			transform: translate3d(0, 200%, 0);
+		}
+		@include mq($s-large){
+			transform: translate3d(0, 50%, 0);
+		}
 		@include mq($large){
 			font-size: 1.2rem;
 		}
@@ -61,7 +98,7 @@
 }
 
 .banner-title{
-	@include banner-title($sub-title);
+	@include banner-title(1.5rem);
 	@include mq($medium){
 		@include banner-title($big-title);
 	}

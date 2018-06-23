@@ -7,6 +7,10 @@ let toggleMenu = document.getElementById('toggle-menu')
 
 // Programamos las funciones
 
+function prueba(){
+	alert('funciona');
+}
+
 function mostrarOcultar(){
 	mainNav.classList.toggle('mostrar')
 }
@@ -17,6 +21,10 @@ function ocultarMenu(){
 
 //Ejecutamos las funciones
 
+document.addEventListener('click', e => {
+	if (e.target !== mainNav && e.target !== toggleMenu) ocultarMenu()
+})
+
 toggleMenu.addEventListener('click', mostrarOcultar)
-mainNav.addEventListener('mouseleave', ocultarMenu)
+mainNav.addEventListener('mouseleave', prueba, false)
 
