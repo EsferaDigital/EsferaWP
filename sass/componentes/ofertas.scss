@@ -1,32 +1,52 @@
 .ofertas{
-	font-family: $primary-font;
-	// border: 3px solid blue;
 	background-color: color(bg-container);
+	// border: 2px solid red;
 }
 
 .c-ofertas{
 	display: flex;
 	flex-wrap: wrap;
-	width: 90%;
-	padding: $gutter-item 0;
+	width: 100%;
 	margin: auto;
+	margin-top: .5rem;
 	// border: 2px solid green;
+	@include mq($movil3){
+		width: 90%;
+	}
+	@include mq($m-small){
+		width: 100%;
+	}
 	@include mq($medium){
 		padding: $gutter 0;
 		width: 95%;
 	}
 	&-item{
 		background-color: color(bg-item);
-		// border: 3px solid red;
+		// border: 3px solid blue;
 		flex: auto;
 		margin-bottom: $gutter-item;
 		box-shadow: $shadow-flat;
+		@include mq($movil1){
+			margin: 0 .5rem .5rem;
+		}
+		@include mq($m-small){
+			display: flex;
+			flex: 1 0 28%;
+			flex-direction: column;
+			justify-content: space-between;
+			margin: 0;
+		}
 		@include mq($medium){
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			flex: 1 0 30%;
-			margin-right: $gutter-item;
+		}
+		&:nth-child(2){
+			@include mq($m-small){
+				margin-left: .5rem;
+				margin-right: .5rem;
+			}
 		}
 		&-title{
 			text-align: center;
@@ -35,6 +55,9 @@
 			font-size: 2rem;
 			letter-spacing: 2px;
 			color: white;
+			@include mq($m-small){
+				font-size: 1.2rem;
+			}
 			@include mq($medium){
 				font-size: 1.5rem;
 			}
@@ -48,6 +71,10 @@
 			font-size: 1.8rem;
 			letter-spacing: 1.5px;
 			// border: 1px solid red;
+			@include mq($m-small){
+				margin-top: .5rem;
+				font-size: 1.5rem;
+			}
 			@include mq($medium){
 				font-size: 1.5rem;
 			}
@@ -71,6 +98,10 @@
 			font-family: $secondary-font;
 			list-style: disc inside;
 			text-indent: 3px;
+			@include mq($m-small){
+				text-indent: 2px;
+				font-size: .7rem;
+			}
 			@include mq($medium){
 				font-size: .9rem;
 			}
@@ -81,7 +112,7 @@
 		&-footer p{
 			font-family: $secondary-font;
 			font-size: .9rem;
-			@include mq($medium){
+			@include mq($m-small){
 				font-size: .7rem;
 			}
 		}
@@ -105,8 +136,9 @@
 	@include mq($movil2){
 		width: 50%;
 	}
-	@include mq($small){
-		width: 40%;
+	@include mq($m-small){
+		width: 90%;
+		font-size: .7rem;
 	}
 	@include mq($medium){
 		width: 80%;
