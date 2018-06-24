@@ -1,42 +1,85 @@
 .contacto{
-	height: auto;
-	padding-top: $top-header;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	// padding-top: $top-header;
 	background-color: color(primary);
 	background-image: url(./img/cafe.jpg);
 	background-position: 50% 90%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	@include mq($medium){
-		height: 100vh;
+	@include mq($movil3){
+		height: 90vh;
+		background-position: 50% 0%;
+	}
+	@include mq($m-small){
+		height: 100%;
 		background-image: url("./img/cafe-large.jpg");
+	}
+	@include mq($medium-large){
+		height: 100vh;
+	}
+}
+
+.c-contacto{
+	height: 100%;
+	// border: 1px solid red;
+	@include mq($movil1){
+		height: 90%;
+	}
+	@include mq($small){
+		width: 90%;
+		margin: auto;
+		margin-top: 5rem;
+	}
+	@include mq($movil2){
+		height: 80%;
+	}
+	@include mq($movil3){
+		width: 80%;
+		margin-top: 5rem;
+	}
+	@include mq($m-small){
+		width: 80%;
+		height: auto;
 	}
 }
 
 .title{
 	color: color(hbo);
 	width: 50%;
-	margin: $gutter auto;
-	font-family: $primary-font;
-	font-size: $title;
+	margin: .5rem auto;
+	font-size: 1.7rem;
+	padding-top: 2rem;
 	font-weight: $normal;
 	text-align: center; 
 	// box-shadow: 0 1px color(hbo);
+	@include mq($movil3){
+		font-size: 1.8rem;
+		margin-top: 1rem; 
+	}
 	@include mq($medium){
 		padding-top: 1rem;
+	}
+	@include mq($large){
+		padding-top: 0;
 	}
 }
 
 .subtitle{
 	display: block;
 	width: 90%;
-	margin: auto;
-	padding: 0 $gutter;
+	margin: .5rem auto;
+	padding: $gutter;
+	padding-top: 0;
 	color: white;
-	margin-bottom: $gutter-item;
 	font-family: $secondary-font;
 	font-size: 1rem;
 	font-weight: $normal;
 	text-align: center;
+	@include mq($large){
+		padding: .5rem;
+	}
 }
 
 .respuesta{
@@ -68,9 +111,24 @@ input, textarea{
 }
 
 .form{
+	position: relative;
+	top: -$gutter;
 	max-width: 600px;
 	margin: 0 auto;
 	border-radius: 2px;
+	// border: 2px solid green;
+	@include mq($movil2){
+		top: .5rem;
+	}
+	@include mq($movil3){
+		top: 1rem;
+	}
+	@include mq($m-small){
+		top: 0;
+	}
+	// @include mq($medium){
+	// 	top: 0;
+	// }
 	&-container{
 		display: flex;
 		flex-wrap: wrap;
@@ -96,5 +154,6 @@ input, textarea{
 		width: 100%;
 		line-height: 4;
 		font-weight: 500;
+		// background-color: color(logo-light);
 	}
 }
