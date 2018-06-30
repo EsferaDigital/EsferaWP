@@ -21,4 +21,5 @@ $search_template = '<p class="c-search">
 ';
 printf($search_template, get_search_query() );
 get_template_part('/plantillas/content');
+get_sidebar();
 get_footer();

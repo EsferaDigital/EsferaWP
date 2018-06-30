@@ -32,16 +32,15 @@ add_filter('excerpt_more', 'read_more');
 
 function widgets_activation(){
 	$args = array(
-		//'name' => __('Sidebar %d'),
-		//'id' => 'sidebar',
-		//'description' => 'Aparece en la interface',
-		//'class' => 'widgets',
-		'before_widget' => '<div class="item widgets">',
+		'name' => __('Barra Lateral 1'),
+		'id' => 'sidebar',
+		'class' => 'widgets',
+		'before_widget' => '<div>',
 		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
+		'before_title' => '<h2>',
+		'after_title' => '</h2>'
 	);
-	register_sidebars(3, $args);
+	register_sidebar($args);
 }
 
 add_action('widgets_init', 'widgets_activation');
