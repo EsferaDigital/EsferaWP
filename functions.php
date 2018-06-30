@@ -31,7 +31,7 @@ add_filter('excerpt_more', 'read_more');
 //Hook para activar los widgets
 
 function widgets_activation(){
-	$args = array(
+	$sidemain = array(
 		'name' => __('Barra Lateral 1'),
 		'id' => 'sidebar',
 		'class' => 'widgets',
@@ -40,7 +40,17 @@ function widgets_activation(){
 		'before_title' => '<h2>',
 		'after_title' => '</h2>'
 	);
-	register_sidebar($args);
+	// $sidefooter = array(
+	// 	'name' => __('Barra Lateral 2'),
+	// 	'id' = 'side-footer',
+	// 	'class' = 'widgets',
+	// 	'before_widget' => '<div>',
+	// 	'after_widget' => '</div>',
+	// 	'before_title' => '<h2>',
+	// 	'after_title' => '</h2>'
+	// );
+	register_sidebar($sidemain);
+	register_sidebar();
 }
 
 add_action('widgets_init', 'widgets_activation');

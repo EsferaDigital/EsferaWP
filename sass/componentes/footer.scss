@@ -103,12 +103,17 @@
 
 //Ultimas entradas footer blog
 
-.widgets{
+// .widget_recent_entries{
+//   border: 2px solid red;
+// }
+
+.widgettitle{
+  display: none;
+}
+
+.widget_recent_entries{
 	text-align: center;
 	margin: 0;
-	& h3{
-		display: none;
-	}
 	& ul{
 		display: flex;
 		flex-wrap: wrap;

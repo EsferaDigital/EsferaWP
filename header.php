@@ -19,7 +19,7 @@ printf('
 		printf('
 			<style>
 				.main-header{
-					top: 2rem;
+					top: 1rem;
 				}
 			</style>
 		');
