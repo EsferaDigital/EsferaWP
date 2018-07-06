@@ -1,5 +1,13 @@
 .contenido-principal{
 	display: flex;
 	flex-wrap: wrap;
-	border: 3px solid yellow;
+	// border: 3px solid yellow;
+	@include mq($large){
+		width: 90%;
+		margin: auto;
+	}
+	@include mq($medium-large){
+		position: relative;
+		top: 9%;
+	}
 }

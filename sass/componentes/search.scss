@@ -1,8 +1,9 @@
 .c-search{
-	padding: 4rem $gutter $gutter;
+	display: block;
+	width: 100%;
+	padding: $gutter;
 	text-align: center;
 	background-color: color(secondary);
-	font-family: $primary-font;
 	font-size: $title;
 	color: white;
 	// border: 1px solid red;

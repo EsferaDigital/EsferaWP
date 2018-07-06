@@ -1,7 +1,9 @@
 .c-footer{
+  position: relative;
+  top: 10%;
   display: block;
   background: color(footer);
-  border: 2px solid purple;
+  // border: 2px solid purple;
   &-item{
     display: flex;
     flex-wrap: wrap;

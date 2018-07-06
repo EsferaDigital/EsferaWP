@@ -1,12 +1,20 @@
 .post{
-	width: 100%;
+	flex: 0 0 100%;
 	max-width: $max-width;
-	margin: auto;
+	margin: 0 .5rem;
 	background-color: color(bg-container);
-	padding: $gutter 0;
-	// border: 1px solid red;
+	// border: 3px solid red;
+	@include mq($medium){
+		flex: 0 0 68%;
+		margin: 0;
+		margin-left: .5rem;
+	}
+	@include mq($medium-large){
+		margin: 0;
+		margin-right: .5rem;
+	}
 	&-item{
-		width: 90%;
+		width: 100%;
 		margin: auto;
 		background-color: color(bg-item);
 		box-shadow: $shadow-flat;
@@ -14,7 +22,7 @@
 	}
 	&-title{
 		width: 80%;
-		margin: $gutter auto;
+		margin: auto;
 		text-align: center;
 		padding: $gutter-item 0;
 		border-bottom: 1px solid color(hbo);
@@ -27,6 +35,7 @@
 		}
 		@include mq($medium){
 			width: 40%;
+			border-bottom: 1px solid transparent;
 		}
 		@include mq($large){
 			width: 25%;
@@ -35,8 +44,8 @@
 	&-img{
 		width: 100%;
 		max-width: 100%;
+		padding: .5rem;
 		@include mq($small){
-			padding: $gutter-item;
 			padding-top: 0;
 		}
 		@include mq($medium){
@@ -100,6 +109,16 @@
 
 
 //Estilos para comentarios
+
+#comments-evolved-tabs{
+	position: relative;
+	top: 10%;	
+	@include mq($medium-large){
+		width: 90%;
+		margin: auto;
+		left: 5%;			
+	}
+}
 
 .fb-comments{
 	width: 100%;

@@ -5,14 +5,14 @@ printf('<section class="c-blog">
 			while( have_posts() ):
 				the_post();
 				$template_html = '
-					<a href="%s">
-						<article class="content-blog-item">
-							<img class="content-blog-item-img" src="%s"/>
-							<h2 class="content-blog-item-title">%s</h2>
-							<p class="content-blog-item-extracto">%s</p>
-							<p class="content-blog-item-date">%s</p>
-						</article>
-					</a>';
+					<article class="content-blog-item">
+						<a href="%s" class="content-blog-figure">
+							<img class="content-blog-figure-img" src="%s"/>
+							<h2 class="content-blog-figure-title">%s</h2>
+						</a>
+						<p class="content-blog-item-extracto">%s</p>
+						<p class="content-blog-item-date">%s</p>
+					</article>';
 				printf(
 					$template_html,
 					get_permalink(),
