@@ -1,5 +1,5 @@
 <?php
-printf('<main class="post">');
+printf('<section class="post">');
 	if( have_posts() ):
 		while( have_posts() ):
 			the_post();
@@ -34,4 +34,4 @@ printf('<main class="post">');
 		printf('<p class="c-empty">No hay coincidencias con tu búsqueda</p>');
 	endif;
 	rewind_posts();
-printf('</main>');
+printf('</section>');

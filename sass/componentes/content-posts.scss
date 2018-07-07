@@ -1,8 +1,9 @@
 .post{
-	flex: 0 0 100%;
+	flex: 1 1 100%;
 	max-width: $max-width;
-	margin: 0 .5rem;
 	background-color: color(bg-container);
+	margin: 0 .5rem;
+	margin-bottom: .5rem;
 	// border: 3px solid red;
 	@include mq($medium){
 		flex: 0 0 68%;
@@ -112,10 +113,25 @@
 
 #comments-evolved-tabs{
 	position: relative;
-	top: 10%;	
-	@include mq($medium-large){
+	top: 10%;
+	@include mq($movil1){
 		width: 90%;
-		margin: auto;
+		left: 5%;
+	}
+	@include mq($movil4){
+		top: 7%;
+		left: 5%;
+	}
+	@include mq($medium){
+		left: 3%;
+	}
+	@include mq($large){
+		width: 80%;
+		top: 5%;
+		left: 7%;
+	}	
+	@include mq($medium-large){
+		top: 10%;
 		left: 5%;			
 	}
 }
@@ -124,6 +140,11 @@
 	width: 100%;
 	& span{
 		width: 100% !important;
+		& iframe{
+			@include mq($movil4){
+				width: 100%;
+			}
+		}
 	}
 }
 

@@ -1,7 +1,17 @@
 .contenido-principal{
+	// padding-top: .5rem;
 	display: flex;
 	flex-wrap: wrap;
 	// border: 3px solid yellow;
+	@include mq($movil2){
+		padding-top: .5rem;
+	}
+	@include mq($movil4){
+		margin-bottom: -1.5rem;
+	}
+	@include mq($medium){
+		margin-bottom: -1rem;
+	}
 	@include mq($large){
 		width: 90%;
 		margin: auto;
@@ -9,5 +19,6 @@
 	@include mq($medium-large){
 		position: relative;
 		top: 9%;
+		padding-bottom: .5rem;
 	}
 }

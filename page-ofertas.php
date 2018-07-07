@@ -1,6 +1,7 @@
 <style>
 .main-header{
 	background-color: #1e2838;
+	box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.575);
 }
 
 #logoContainer{

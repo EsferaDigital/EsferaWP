@@ -129,7 +129,7 @@
 		font-family: $primary-font;
 		font-size: $sub-title;
 		color: white;
-		border: 1px solid rgb(128, 0, 111);
+		// border: 1px solid rgb(128, 0, 111);
 	}
 }
 
@@ -174,7 +174,7 @@
 		&:nth-child(3n +3){
 			@include mq($medium){
 				margin-right: 0;
-				border: 2px solid pink;
+				// border: 2px solid pink;
 			}
 		}
 		&-text{

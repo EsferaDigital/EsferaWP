@@ -1,11 +1,12 @@
 'use strict'
 
-//tope de ventana  + ((altura de ventana *2) / 5)
-const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 6);
+//tope de ventana  + ((altura de ventana / 100) 70)=70%
+const windowTop = window.pageYOffset + ((window.innerHeight / 100) * 70);
 const target = document.querySelectorAll('[data-anime]');
 
 function animaScroll(){
 	//para capturar cada objeto con el atributo [data-anime]
+	console.log(windowTop)
 	target.forEach(function (e){
 		// getBoundingClientRect() nos da las coordenadas de los objeto con el atributo [data-anime]
 		let caja = e.getBoundingClientRect()
