@@ -1,6 +1,6 @@
 <section class="ofertas">
 	<div class="c-ofertas">
-		<article class="c-ofertas-item">
+		<article class="c-ofertas-item zoomin">
 			<h2 class="c-ofertas-item-title">Plan Básico</h2>
 			<div class="c-ofertas-item-price">$200.000/<span>+ IVA</span></div>
 			<ul class="c-ofertas-item-detail">
@@ -19,7 +19,7 @@
 				<p>** Por un Año</p>
 			</footer>			
 		</article>
-		<article class="c-ofertas-item">
+		<article class="c-ofertas-item zoomin">
 			<h2 class="c-ofertas-item-title">Plan Pyme</h2>
 			<div class="c-ofertas-item-price">$360.000/<span>+ IVA</span></div>
 			<ul class="c-ofertas-item-detail">
@@ -42,7 +42,7 @@
 				<p>*** Una de ellas puede ser un Blog</p>
 			</footer>			
 		</article>
-		<article class="c-ofertas-item">
+		<article class="c-ofertas-item zoomin">
 			<h2 class="c-ofertas-item-title">Plan Corporativo</h2>
 			<div class="c-ofertas-item-price">$800.000/<span>+ IVA</span></div>
 			<ul class="c-ofertas-item-detail">

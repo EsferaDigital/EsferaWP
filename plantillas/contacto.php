@@ -20,7 +20,7 @@
 }
 </style>
 <div class="contacto">
-  <div class="c-contacto">
+  <div class="c-contacto zoomin">
     <h3 class="title">Contacto</h3>
     <h4 class="subtitle">Cuéntanos sobre tu proyecto y nos pondremos en contacto</h4>
     <?php if(isset($_GET['errormsg'])):?>

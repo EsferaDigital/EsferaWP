@@ -1,21 +1,21 @@
 <main class="c-main">
   <section class="c-destacados">
     <h3 class="c-destacados-title"><span>Destacamos</span></h3>
-    <article class="c-destacados-item" data-anime="left">
+    <article class="c-destacados-item" data-anime="latI">
       <aside class="c-destacados-item-aside">
         <span class="icon-ampolleta"></span>
         <h2>Creatividad</h2>
         <p>Tu presencia en el Mundo está marcada por la imagen que representas, por la identidad que construyes. Nadie en el mundo tiene presencia si no es capaz de crear una identidad que lo distinga.</p>
       </aside>
     </article>
-    <article class="c-destacados-item" data-anime="top">
+    <article class="c-destacados-item" data-anime="segunda">
       <aside class="c-destacados-item-aside">
         <span class="icon-smile"></span>
         <h2>Amigable</h2>
         <p>Una interfaz clara, sencilla, que explique amigablemente lo que ofreces, que permita interactuar fácil y cómodamente con tu sitio, pensada desde el usuario, también es clave para el éxito de tu presencia en la Web.</p>
       </aside>
     </article>
-    <article class="c-destacados-item" data-anime="right">
+    <article class="c-destacados-item" data-anime="medio">
       <aside class="c-destacados-item-aside">
         <span class="icon-adaptativo"></span>
         <h2>Adaptable</h2>
@@ -25,7 +25,7 @@
   </section>
   <section class="c-destacados-servicios">
     <h3 class="c-destacados-servicios-title">Servicios</h3>
-    <article class="c-destacados-servicios-item" data-anime="left">
+    <article class="c-destacados-servicios-item" data-anime="latI">
       <aside class="c-destacados-servicios-item-aside">
         <span class="icon-ruler"></span>
         <h2>Diseño Web</h2>
@@ -39,7 +39,7 @@
         </p>
       </aside>
     </article>
-    <article class="c-destacados-servicios-item" data-anime="right">
+    <article class="c-destacados-servicios-item" data-anime="latD">
       <aside class="c-destacados-servicios-item-aside">
         <span class="icon-code"></span>
         <h2>Desarrollo Web</h2>
@@ -48,7 +48,7 @@
         <p>Desarrollamos en base a los estándares recomendados, lo que facilita el posicionamiento en buscadores, con etiquetas semánticas, sin pesadas librerías, con un código optimizado y actualizado</p>
       </aside>
     </article>
-    <article class="c-destacados-servicios-item" data-anime="left">
+    <article class="c-destacados-servicios-item" data-anime="latI">
       <aside class="c-destacados-servicios-item-aside">
         <span class="icon-refresh"></span>
         <h2>Actualización</h2>
@@ -57,7 +57,7 @@
         <p>Actualizamos periódicamente los sitios de nuestros clientes para mejorar aquellos aspectos que requieren cambios estéticos o actualizaciones tecnológicas</p>
       </aside>
     </article>
-    <article class="c-destacados-servicios-item" data-anime="right">
+    <article class="c-destacados-servicios-item" data-anime="latD">
       <aside class="c-destacados-servicios-item-aside">
         <span class="icon-server"></span>
         <h2>Hosting</h2>
